@@ -1,0 +1,39 @@
+{
+  "name": "music",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "modal": "^0.3.24",
+    "react": "^19.1.1",
+    "react-calendar": "^6.0.0",
+    "react-dom": "^19.1.1",
+    "react-hook-form": "^7.62.0",
+    "react-modal": "^3.16.3",
+    "react-router-dom": "^6.28.2",
+    "react-spinners": "^0.17.0",
+    "react-toastify": "^11.0.5",
+    "spinner": "^0.3.4",
+    "swal": "^0.1.0",
+    "sweetalert2": "^11.26.1",
+    "toster": "^0.0.22"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "vite": "^7.1.2"
+  }
+}
