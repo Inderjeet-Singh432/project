@@ -3,9 +3,11 @@ export default function Body(){
         <>
         <main className="main">
   {/* Hero Section */}
-  <section id="hero" className="hero section dark-background">
-    <img src="/Assets/assets/img/hero-bg.jpg" alt=""  />
-  </section>
+  
+  {/* <section id="hero" className="hero section dark-background">
+  </section> */}
+    <img src="/Assets/assets/img/hero-bg.jpg" alt="" style={{height:"500px",width:"100%"}} />
+
   {/* /Hero Section */}
   {/* About Section */}
   <section id="about" className="about section">

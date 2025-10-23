@@ -1,7 +1,7 @@
 export default function Footer(){
     return(
         <>
-        <>
+ 
   <footer id="footer" className="footer dark-background">
     <div className="container footer-top">
       <div className="row gy-4">
@@ -120,8 +120,6 @@ export default function Footer(){
     </div>
     <a href="“https://themewagon.com"></a>
   </footer>
-  <a href="“https://themewagon.com"></a>
-</>
 
         </>
     )

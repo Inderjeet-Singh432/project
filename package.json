@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^1.12.2",
     "modal": "^0.3.24",
+    "rc-slider": "^11.1.9",
     "react": "^19.1.1",
     "react-calendar": "^6.0.0",
     "react-dom": "^19.1.1",
@@ -23,6 +24,7 @@
     "spinner": "^0.3.4",
     "swal": "^0.1.0",
     "sweetalert2": "^11.26.1",
+    "swiper": "^12.0.3",
     "toster": "^0.0.22"
   },
   "devDependencies": {
