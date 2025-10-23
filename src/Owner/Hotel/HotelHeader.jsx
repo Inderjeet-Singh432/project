@@ -89,6 +89,7 @@ function logoutfun(){
      Login
     </a> */}
         <button className="btn btn-outline-danger" onClick={logoutfun}>Logout</button>
+        
     </div>
   </div>    
 </header>

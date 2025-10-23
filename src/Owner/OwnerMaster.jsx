@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import PgHeader from "./PgHeader";
+import OwnerHeader from "./OwnerHeader";
 
-export default function PgMaster(){
+export default function OwnerMaster(){
     return(
         <>
-        <PgHeader/>
+        <OwnerHeader/>
         <Outlet/>
         </>
     )

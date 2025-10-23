@@ -1,18 +1,6 @@
-export default function PgBody(){
+export default function OwnerFooter(){
     return(
         <>
-<section id="about" className="about section">
-    <div className="container">
-      <div className="row gy-4">
-        
-        <h1>pgbody</h1>
-
-
-             </div>
-    </div>
- 
-</section>
-
 <footer id="footer" className="footer dark-background">
     <div className="container footer-top">
       <div className="row gy-4">
@@ -131,7 +119,6 @@ export default function PgBody(){
     </div>
     <a href="“https://themewagon.com"></a>
   </footer>
-   
         </>
     )
 }
