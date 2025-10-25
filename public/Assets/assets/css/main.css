@@ -45,12 +45,13 @@
 }
 
 .dark-background {
-  --background-color: #000910;
+  --background-color: #000033;      /* footer color */
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #28323a;
   --contrast-color: #ffffff;
 }
+
 
 /* Smooth scroll */
 :root {
@@ -222,7 +223,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgb(51, 53, 61);
+  --background-color:#000033;      /* header color */
   --default-color: #ffffff;
   /* logo color  */
   --heading-color: #ffffff;

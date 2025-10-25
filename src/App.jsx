@@ -12,6 +12,7 @@ import Contact from './Componets/contact'
 import Login from './Componets/Login'
 import OwnerMaster from './Owner/OwnerPanel/OwnerMaster'
 import AddHotel from './Owner/Hotel/AddHotel'
+import AddingForm from './Owner/OwnerPanel/AddingForm'
 
 function App() {
 
@@ -38,8 +39,9 @@ function App() {
             </Route>
 
             <Route path='/Owner' element={<OwnerMaster/>}>
-                    <Route path='/Owner' element={<HotelBody/>}></Route>
+                    {/* <Route path='/Owner' element={<HotelBody/>}></Route> */}
                     <Route path='/Owner' element={<AddHotel/>}></Route>
+                    <Route path='/Owner/addform' element={<AddingForm/>}></Route>
             </Route>
         </Routes>
      </BrowserRouter>

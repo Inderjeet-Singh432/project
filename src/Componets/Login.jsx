@@ -20,6 +20,16 @@ export default function Login(){
                 sessionStorage.setItem("isLogin",true)
               
                 setTimeout(()=>{
+                    nav("/admin")
+                },4000)
+        } else if(email == "owner@gmail.com" && password=="123"){
+            toast.success("Owner login successfully!!")
+                // store data
+                sessionStorage.setItem("email","owner@gmail.com")
+                sessionStorage.setItem("name","admin")
+                sessionStorage.setItem("isLogin",true)
+              
+                setTimeout(()=>{
                     nav("/owner")
                 },4000)
         }
