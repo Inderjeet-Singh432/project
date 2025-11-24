@@ -40,32 +40,170 @@ export default function Login(){
   }
     return(
         <>
-          <header id="header" className="header d-flex align-items-center fixed-top">
-          <div className="container-fluid container-xl position-relative d-flex align-items-center">
-            <a href="index.html" className="logo d-flex align-items-center me-auto">
-              {/* Uncomment the line below if you also wish to use an image logo */}
-              {/* <img src="assets/img/logo.png" alt=""> */}
-              <h1 className="sitename">Login to Dewi</h1>
-            </a>
-            <nav id="navmenu" className="navmenu">
-                  <i className="mobile-nav-toggle d-xl-none bi bi-list" />
-            </nav>
-            <div>
-              {/* <a  onClick={openModal}  className="cta-btn" href="index.html#about">
-             Login
-            </a> */}
-            <Link className="btn btn-outline-light" to={"/"} >Go Back</Link>
-               
+        {/* header start */}
+         <div className="hero-content">
+    <header className="site-header">
+      <div className="top-header-bar">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
+              <div className="header-bar-email d-flex align-items-center">
+                <i className="fa fa-envelope" />
+                <a href="#">tuanna.design@gmail.com</a>
+              </div>
+              {/* .header-bar-email */}
+              <div className="header-bar-text lg-flex align-items-center">
+                <p>
+                  <i className="fa fa-phone" />
+                  001-1234-88888{" "}
+                </p>
+              </div>
+              {/* .header-bar-text */}
             </div>
+            {/* .col */}
+            <div className="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+              <div className="header-bar-search">
+                <form className="flex align-items-stretch">
+                  <input
+                    type="search"
+                    placeholder="What would you like to learn?"
+                  />
+                  <button
+                    type="submit"
+                    value=""
+                    className="flex justify-content-center align-items-center"
+                  >
+                    <i className="fa fa-search" />
+                  </button>
+                </form>
+              </div>
+              {/* .header-bar-search */}
+              <div className="header-bar-menu">
+                <ul className="flex justify-content-center align-items-center py-2 pt-md-0">
+                  <li>
+                    <a href="#">Register</a>
+                  </li>
+                  <li>
+                    <a href="#">Login</a>
+                  </li>
+                </ul>
+              </div>
+              {/* .header-bar-menu */}
+            </div>
+            {/* .col */}
           </div>
-              
-            
-                  
-        </header>
+          {/* .row */}
+        </div>
+        {/* .container-fluid */}
+      </div>
+
+      {/* .top-header-bar */}
+      <div className="nav-bar">
+        <div className="container">
+          <div className="row">
+            <div className="col-9 col-lg-3">
+              <div className="site-branding">
+                <h1 className="site-title">
+                  <a href="index.html" rel="home">
+                    M<span>SB</span>
+                  </a>
+                </h1>
+              </div>
+              {/* .site-branding */}
+            </div>
+            {/* .col */}
+            <div className="col-3 col-lg-9 flex justify-content-end align-content-center">
+              <nav className="site-navigation flex justify-content-end align-items-center">
+                <ul className="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
+                  <li className="current-menu-item">
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="#">About</a>
+                  </li>
+                  <li>
+                    <a href="#">Courses</a>
+                  </li>
+                  <li>
+                    <a href="#">blog</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact</a>
+                  </li>
+                </ul>
+                <div className="hamburger-menu d-lg-none">
+                  <span />
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                {/* .hamburger-menu */}
+                <div className="header-bar-cart">
+                  <a
+                    href="#"
+                    className="flex justify-content-center align-items-center"
+                  >
+                    <span aria-hidden="true" className="icon_bag_alt" />
+                  </a>
+                </div>
+                {/* .header-bar-search */}
+              </nav>
+              {/* .site-navigation */}
+            </div>
+            {/* .col */}
+          </div>
+          {/* .row */}
+        </div>
+        {/* .container */}
+      </div>
+      {/* .nav-bar */}
+    </header>
+    {/* .site-header */}
+    <div className="hero-content-overlay">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="hero-content-wrap flex flex-column justify-content-center align-items-start">
+              <header className="entry-header">
+                <h4>Get started with online courses</h4>
+                <h1>
+                  best online
+                  <br />
+                  Learning system
+                </h1>
+              </header>
+              {/* .entry-header */}
+              <div className="entry-content">
+                <p>
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt mollit anim id est laborum. Sed ut
+                  perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium
+                </p>
+              </div>
+              {/* .entry-content */}
+              <footer className="entry-footer read-more">
+                <a href="#">read more</a>
+              </footer>
+              {/* .entry-footer */}
+            </div>
+            {/* .hero-content-wrap */}
+          </div>
+          {/* .col */}
+        </div>
+        {/* .row */}
+      </div>
+      {/* .container */}
+    </div>
+    {/* .hero-content-hero-content-overlay */}
+  </div>
+        {/* header end */}
         {/* login form start */}
           <ToastContainer/>
-        <div className="row">
-            <div className="col-4"></div>
+       <div className="container">
+      <div className="row">
+        <div className="col-12">
+                 <div className="col-4"></div>
 
             <div className="col" style={{paddingTop:"30px", paddingBottom:"70px"}}>
                 <h4>Login</h4>
@@ -90,127 +228,157 @@ export default function Login(){
 
             <div className="col-4"></div>
         </div>
-        {/* login form end */}
-
-
-    <footer id="footer" className="footer dark-background">
-    <div className="container footer-top">
-      <div className="row gy-4">
-        <div className="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" className="logo d-flex align-items-center">
-            <span className="sitename">Dewi</span>
-          </a>
-          <div className="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p className="mt-3">
-              <strong>Phone:</strong> <span>+1 5589 55488 55</span>
-            </p>
-            <p>
-              <strong>Email:</strong> <span>info@example.com</span>
-            </p>
-          </div>
-          <div className="social-links d-flex mt-4">
-            <a href="">
-              <i className="bi bi-twitter-x" />
-            </a>
-            <a href="">
-              <i className="bi bi-facebook" />
-            </a>
-            <a href="">
-              <i className="bi bi-instagram" />
-            </a>
-            <a href="">
-              <i className="bi bi-linkedin" />
-            </a>
-          </div>
         </div>
-        <div className="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li>
-              <i className="bi bi-chevron-right" /> <a href="#">Home</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" /> <a href="#">About us</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" /> <a href="#">Services</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" />{" "}
-              <a href="#">Terms of service</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" />{" "}
-              <a href="#">Privacy policy</a>
-            </li>
-          </ul>
         </div>
-        <div className="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li>
-              <i className="bi bi-chevron-right" /> <a href="#">Web Design</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" />{" "}
-              <a href="#">Web Development</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" />{" "}
-              <a href="#">Product Management</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" /> <a href="#">Marketing</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" />{" "}
-              <a href="#">Graphic Design</a>
-            </li>
-          </ul>
-        </div>
-        <div className="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>
-            Subscribe to our newsletter and receive the latest news about our
-            products and services!
-          </p>
-          <form
-            action="forms/newsletter.php"
-            method="post"
-            className="php-email-form"
-          >
-            <div className="newsletter-form">
-              <input type="email" name="email" />
-              <input type="submit" defaultValue="Subscribe" />
+      {/* login form end */}
+      {/* footer start */}
+          <footer className="site-footer">
+    <div className="footer-widgets">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-md-6 col-lg-3">
+            <div className="foot-about">
+              <a className="foot-logo" href="#">
+                <img src="/Assets2/images/foot-logo.png" alt="" />
+              </a>
+              <p>
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia dese mollit anim id est laborum.{" "}
+              </p>
+              <p className="footer-copyright">
+                {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
+                Copyright © All rights reserved | This template is made with{" "}
+                <i className="fa fa-heart-o" aria-hidden="true" /> by{" "}
+                <a href="https://colorlib.com" target="_blank">
+                  Colorlib
+                </a>
+                {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
+              </p>
             </div>
-            <div className="loading">Loading</div>
-            <div className="error-message" />
-            <div className="sent-message">
-              Your subscription request has been sent. Thank you!
+            {/* .foot-about */}
+          </div>
+          {/* .col */}
+          <div className="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+            <div className="foot-contact">
+              <h2>Contact Us</h2>
+              <ul>
+                <li>Email: info.deertcreative@gmail.com</li>
+                <li>Phone: (+88) 111 555 666</li>
+                <li>Address: 40 Baria Sreet 133/2 NewYork City, US</li>
+              </ul>
             </div>
-          </form>
+            {/* .foot-contact */}
+          </div>
+          {/* .col */}
+          <div className="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
+            <div className="quick-links flex flex-wrap">
+              <h2 className="w-100">Quick Links</h2>
+              <ul className="w-50">
+                <li>
+                  <a href="#">About </a>
+                </li>
+                <li>
+                  <a href="#">Terms of Use </a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy </a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+              <ul className="w-50">
+                <li>
+                  <a href="#">Documentation</a>
+                </li>
+                <li>
+                  <a href="#">Forums</a>
+                </li>
+                <li>
+                  <a href="#">Language Packs</a>
+                </li>
+                <li>
+                  <a href="#">Release Status</a>
+                </li>
+              </ul>
+            </div>
+            {/* .quick-links */}
+          </div>
+          {/* .col */}
+          <div className="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
+            <div className="follow-us">
+              <h2>Follow Us</h2>
+              <ul className="follow-us flex flex-wrap align-items-center">
+                <li>
+                  <a href="#">
+                    <i className="fa fa-facebook" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa fa-google-plus" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa fa-instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa fa-twitter" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* .quick-links */}
+          </div>
+          {/* .col */}
         </div>
+        {/* .row */}
       </div>
+      {/* .container */}
     </div>
-    <div className="container copyright text-center mt-4">
-      <p>
-        © <span>Copyright</span> <strong className="px-1 sitename">Dewi</strong>{" "}
-        <span>All Rights Reserved</span>
-      </p>
-      <div className="credits">
-        {/* All the links in the footer should remain intact. */}
-        {/* You can delete the links only if you've purchased the pro version. */}
-        {/* Licensing information: https://bootstrapmade.com/license/ */}
-        {/* Purchase the pro version with working PHP/AJAX contact form: [buy-url] */}
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>{" "}
-        Distributed by <a href="“https://themewagon.com">ThemeWagon</a>
+    {/* .footer-widgets */}
+    <div className="footer-bar">
+      <div className="container">
+        <div className="row flex-wrap justify-content-center justify-content-lg-between align-items-center">
+          <div className="col-12 col-lg-6">
+            <div className="download-apps flex flex-wrap justify-content-center justify-content-lg-start align-items-center">
+              <a href="#">
+                <img src="/Assets2/images/app-store.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="/Assets2/images/play-store.png" alt="" />
+              </a>
+            </div>
+            {/* .download-apps */}
+          </div>
+          <div className="col-12 col-lg-6 mt-4 mt-lg-0">
+            <div className="footer-bar-nav">
+              <ul className="flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                <li>
+                  <a href="#">DPA</a>
+                </li>
+                <li>
+                  <a href="#">Terms of Use</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+            {/* .footer-bar-nav */}
+          </div>
+          {/* .col-12 */}
+        </div>
+        {/* .row */}
       </div>
-      <a href="“https://themewagon.com"></a>
+      {/* .container */}
     </div>
-    <a href="“https://themewagon.com"></a>
+    {/* .footer-bar */}
   </footer>
+      {/* footer end */}
         </>
     )
 }
