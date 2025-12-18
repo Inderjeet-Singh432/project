@@ -34,7 +34,7 @@ export default function Login(){
                 },4000)
         }
             else{
-                 toast.error("error")
+                 toast.error("something went wrong")
                 
         } 
   }

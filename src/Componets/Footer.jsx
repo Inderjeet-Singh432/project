@@ -147,7 +147,6 @@ export default function Footer(){
     </div>
     {/* .footer-bar */}
   </footer>
-  {/* .site-footer */}
         </>
     )
 }

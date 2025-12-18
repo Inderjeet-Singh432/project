@@ -1,7 +1,15 @@
-export default function OwnerBody(){
-    return(
+export default function OwnerBody() {
+    return (
         <>
-        <h1>ownerBody</h1>
+            <section className="latest-news-events">
+                <div className="container">
+                    <div className="row">
+
+                        <h1>ownerBody</h1>
+
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
