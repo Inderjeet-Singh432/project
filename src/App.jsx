@@ -4,15 +4,12 @@ import Master from './Componets/Master'
 import Body from './Componets/Body'
 import AdminMaster from './Admin/AdminMaster'
 import Adminbody from './Admin/AdminBody'
-import DormitoryMaster from './Owner/Dormitory/dormitoryMaster'
-import DomitoryBody from './Owner/Dormitory/DomitoryBody'
-import HotelMaster from './Owner/Hotel/HotelMaster'
-import HotelBody from './Owner/Hotel/HotelBody'
-import Contact from './Componets/contact'
+
+
 import Login from './Componets/Login'
-import OwnerMaster from './Owner/OwnerPanel/OwnerMaster'
-import AddHotel from './Owner/Hotel/AddHotel'
-import AddingForm from './Owner/OwnerPanel/AddingForm'
+
+import OwnerBody from './Owner/OwnerBody'
+import OwnerMaster from './Owner/OwnerMaster'
 
 function App() {
 
@@ -22,10 +19,9 @@ function App() {
         <Routes>
              <Route path='/' element={<Master/>}>
                   <Route path='/' element={<Body/>}></Route>
-                  <Route path='/contact' element={<Contact/>}></Route>
+                  <Route path='/login' element={<Login/>}></Route>
              </Route>
              {/* login */}
-               <Route path='/login' element={<Login/>}></Route>
 
              <Route path='/admin' element={<AdminMaster/>}>
                   <Route path='/admin' element={<Adminbody/>}></Route>
@@ -36,12 +32,14 @@ function App() {
              </Route>
 
             <Route path='/hotel' element={<HotelMaster/>}>
+            
             </Route>
 
             <Route path='/Owner' element={<OwnerMaster/>}>
                     {/* <Route path='/Owner' element={<HotelBody/>}></Route> */}
-                    <Route path='/Owner' element={<AddHotel/>}></Route>
-                    <Route path='/Owner/addform' element={<AddingForm/>}></Route>
+                    <Route path='/Owner' element={<OwnerBody/>}></Route>
+                    {/* <Route path='/Owner' element={<AddHotel/>}></Route> */}
+                    {/* <Route path='/Owner/addform' element={<AddingForm/>}></Route> */}
             </Route>
         </Routes>
      </BrowserRouter>

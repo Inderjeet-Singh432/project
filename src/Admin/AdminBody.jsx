@@ -1,137 +1,154 @@
 export default function Adminbody(){
     return(
         <>
-        
-<section id="about" className="about section">
-    <div className="container">
-      <div className="row gy-4">
-        
-          <h1>adminbody</h1>
+      <h1>admin panel</h1>
 
-             </div>
-    </div>
- 
-</section>
-
-<footer id="footer" className="footer dark-background">
-    <div className="container footer-top">
-      <div className="row gy-4">
-        <div className="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" className="logo d-flex align-items-center">
-            <span className="sitename">Dewi</span>
-          </a>
-          <div className="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p className="mt-3">
-              <strong>Phone:</strong> <span>+1 5589 55488 55</span>
-            </p>
-            <p>
-              <strong>Email:</strong> <span>info@example.com</span>
-            </p>
-          </div>
-          <div className="social-links d-flex mt-4">
-            <a href="">
-              <i className="bi bi-twitter-x" />
-            </a>
-            <a href="">
-              <i className="bi bi-facebook" />
-            </a>
-            <a href="">
-              <i className="bi bi-instagram" />
-            </a>
-            <a href="">
-              <i className="bi bi-linkedin" />
-            </a>
-          </div>
-        </div>
-        <div className="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li>
-              <i className="bi bi-chevron-right" /> <a href="#">Home</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" /> <a href="#">About us</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" /> <a href="#">Services</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" />{" "}
-              <a href="#">Terms of service</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" />{" "}
-              <a href="#">Privacy policy</a>
-            </li>
-          </ul>
-        </div>
-        <div className="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li>
-              <i className="bi bi-chevron-right" /> <a href="#">Web Design</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" />{" "}
-              <a href="#">Web Development</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" />{" "}
-              <a href="#">Product Management</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" /> <a href="#">Marketing</a>
-            </li>
-            <li>
-              <i className="bi bi-chevron-right" />{" "}
-              <a href="#">Graphic Design</a>
-            </li>
-          </ul>
-        </div>
-        <div className="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>
-            Subscribe to our newsletter and receive the latest news about our
-            products and services!
-          </p>
-          <form
-            action="forms/newsletter.php"
-            method="post"
-            className="php-email-form"
-          >
-            <div className="newsletter-form">
-              <input type="email" name="email" />
-              <input type="submit" defaultValue="Subscribe" />
+       <footer className="site-footer">
+    <div className="footer-widgets">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-md-6 col-lg-3">
+            <div className="foot-about">
+              <a className="foot-logo" href="#">
+                <img src="/Assets2/images/foot-logo.png" alt="" />
+              </a>
+              <p>
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia dese mollit anim id est laborum.{" "}
+              </p>
+              <p className="footer-copyright">
+                {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
+                Copyright © All rights reserved | This template is made with{" "}
+                <i className="fa fa-heart-o" aria-hidden="true" /> by{" "}
+                <a href="https://colorlib.com" target="_blank">
+                  Colorlib
+                </a>
+                {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
+              </p>
             </div>
-            <div className="loading">Loading</div>
-            <div className="error-message" />
-            <div className="sent-message">
-              Your subscription request has been sent. Thank you!
+            {/* .foot-about */}
+          </div>
+          {/* .col */}
+          <div className="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+            <div className="foot-contact">
+              <h2>Contact Us</h2>
+              <ul>
+                <li>Email: info.deertcreative@gmail.com</li>
+                <li>Phone: (+88) 111 555 666</li>
+                <li>Address: 40 Baria Sreet 133/2 NewYork City, US</li>
+              </ul>
             </div>
-          </form>
+            {/* .foot-contact */}
+          </div>
+          {/* .col */}
+          <div className="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
+            <div className="quick-links flex flex-wrap">
+              <h2 className="w-100">Quick Links</h2>
+              <ul className="w-50">
+                <li>
+                  <a href="#">About </a>
+                </li>
+                <li>
+                  <a href="#">Terms of Use </a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy </a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+              <ul className="w-50">
+                <li>
+                  <a href="#">Documentation</a>
+                </li>
+                <li>
+                  <a href="#">Forums</a>
+                </li>
+                <li>
+                  <a href="#">Language Packs</a>
+                </li>
+                <li>
+                  <a href="#">Release Status</a>
+                </li>
+              </ul>
+            </div>
+            {/* .quick-links */}
+          </div>
+          {/* .col */}
+          <div className="col-12 col-md-6 col-lg-3 mt-5 mt-lg-0">
+            <div className="follow-us">
+              <h2>Follow Us</h2>
+              <ul className="follow-us flex flex-wrap align-items-center">
+                <li>
+                  <a href="#">
+                    <i className="fa fa-facebook" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa fa-google-plus" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa fa-instagram" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa fa-twitter" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            {/* .quick-links */}
+          </div>
+          {/* .col */}
         </div>
+        {/* .row */}
       </div>
+      {/* .container */}
     </div>
-    <div className="container copyright text-center mt-4">
-      <p>
-        © <span>Copyright</span> <strong className="px-1 sitename">Dewi</strong>{" "}
-        <span>All Rights Reserved</span>
-      </p>
-      <div className="credits">
-        {/* All the links in the footer should remain intact. */}
-        {/* You can delete the links only if you've purchased the pro version. */}
-        {/* Licensing information: https://bootstrapmade.com/license/ */}
-        {/* Purchase the pro version with working PHP/AJAX contact form: [buy-url] */}
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>{" "}
-        Distributed by <a href="“https://themewagon.com">ThemeWagon</a>
+    {/* .footer-widgets */}
+    <div className="footer-bar">
+      <div className="container">
+        <div className="row flex-wrap justify-content-center justify-content-lg-between align-items-center">
+          <div className="col-12 col-lg-6">
+            <div className="download-apps flex flex-wrap justify-content-center justify-content-lg-start align-items-center">
+              <a href="#">
+                <img src="/Assets2/images/app-store.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="/Assets2/images/play-store.png" alt="" />
+              </a>
+            </div>
+            {/* .download-apps */}
+          </div>
+          <div className="col-12 col-lg-6 mt-4 mt-lg-0">
+            <div className="footer-bar-nav">
+              <ul className="flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
+                <li>
+                  <a href="#">DPA</a>
+                </li>
+                <li>
+                  <a href="#">Terms of Use</a>
+                </li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+            {/* .footer-bar-nav */}
+          </div>
+          {/* .col-12 */}
+        </div>
+        {/* .row */}
       </div>
-      <a href="“https://themewagon.com"></a>
+      {/* .container */}
     </div>
-    <a href="“https://themewagon.com"></a>
+    {/* .footer-bar */}
   </footer>
-   
         </>
     )
 }

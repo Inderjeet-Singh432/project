@@ -159,7 +159,6 @@ export default function Header(){
     </div>
     {/* .hero-content-hero-content-overlay */}
   </div>
-  {/* .hero-content */}
       </>
     )
 }
