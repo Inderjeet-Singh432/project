@@ -5,59 +5,6 @@ export default function Header(){
         <>
   <div className="hero-content">
     <header className="site-header">
-      <div className="top-header-bar">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
-              <div className="header-bar-email d-flex align-items-center">
-                <i className="fa fa-envelope" />
-                <a href="#">tuanna.design@gmail.com</a>
-              </div>
-              {/* .header-bar-email */}
-              <div className="header-bar-text lg-flex align-items-center">
-                <p>
-                  <i className="fa fa-phone" />
-                  001-1234-88888{" "}
-                </p>
-              </div>
-              {/* .header-bar-text */}
-            </div>
-            {/* .col */}
-            <div className="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-              <div className="header-bar-search">
-                <form className="flex align-items-stretch">
-                  <input
-                    type="search"
-                    placeholder="What would you like to learn?"
-                  />
-                  <button
-                    type="submit"
-                    value=""
-                    className="flex justify-content-center align-items-center"
-                  >
-                    <i className="fa fa-search" />
-                  </button>
-                </form>
-              </div>
-              {/* .header-bar-search */}
-              <div className="header-bar-menu">
-                <ul className="flex justify-content-center align-items-center py-2 pt-md-0">
-                  <li>
-                    <a href="#">Register</a>
-                  </li>
-                  <li>
-                    <Link to ="/login">Login</Link>
-                  </li>
-                </ul>
-              </div>
-              {/* .header-bar-menu */}
-            </div>
-            {/* .col */}
-          </div>
-          {/* .row */}
-        </div>
-        {/* .container-fluid */}
-      </div>
 
       {/* .top-header-bar */}
       <div className="nav-bar">
@@ -92,6 +39,12 @@ export default function Header(){
                   <li>
                     <a href="#">Contact</a>
                   </li>
+                     <li>
+                            <a href="#">Register</a>
+                          </li>
+                          <li>
+                            <Link to ="/login">Login</Link>
+                          </li>
                 </ul>
                 <div className="hamburger-menu d-lg-none">
                   <span />
@@ -103,9 +56,8 @@ export default function Header(){
                 <div className="header-bar-cart">
                   <a
                     href="#"
-                    className="flex justify-content-center align-items-center"
+                    className="flex "
                   >
-                    <span aria-hidden="true" className="icon_bag_alt" />
                   </a>
                 </div>
                 {/* .header-bar-search */}
@@ -120,6 +72,8 @@ export default function Header(){
       </div>
       {/* .nav-bar */}
     </header>
+
+    
     {/* .site-header */}
     <div className="hero-content-overlay">
       <div className="container">
