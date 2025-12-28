@@ -9,27 +9,26 @@ import OwnerBody from './Owner/OwnerBody'
 import OwnerMaster from './Owner/OwnerMaster'
 
 function App() {
+     return (
+          <>
+               <BrowserRouter>
+                    <Routes>
+                         <Route path='/' element={<Master />}>
+                              <Route path='/' element={<Body />}></Route>
+                              <Route path='/login' element={<Login />}></Route>
+                         </Route>
 
-  return (
-    <>
-     <BrowserRouter>
-        <Routes>
-             <Route path='/' element={<Master/>}>
-                  <Route path='/' element={<Body/>}></Route>
-                  <Route path='/login' element={<Login/>}></Route>
-             </Route>
+                         <Route path='/admin' element={<AdminMaster />}>
+                              <Route path='/admin' element={<Adminbody />}></Route>
+                         </Route>
 
-             <Route path='/admin' element={<AdminMaster/>}>
-                  <Route path='/admin' element={<Adminbody/>}></Route>
-             </Route>
-
-            <Route path='/Owner' element={<OwnerMaster/>}>
-                    <Route path='/Owner' element={<OwnerBody/>}></Route>
-            </Route>
-        </Routes>
-     </BrowserRouter>
-    </>
-  )
+                         <Route path='/Owner' element={<OwnerMaster />}>
+                              <Route path='/Owner' element={<OwnerBody />}></Route>
+                         </Route>
+                    </Routes>
+               </BrowserRouter>
+          </>
+     )
 }
 
 export default App

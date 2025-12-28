@@ -2,16 +2,22 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { toast, ToastContainer } from "react-toastify"
 import ApiServices from "../ApiServices"
+import { BarLoader } from "react-spinners"
 
 export default function Login() {
   var [email, setEmail] = useState("")
   var [password, setPassword] = useState("")
+    var[load,setLoad]=useState(false)
+
   var nav = useNavigate()
 
   sessionStorage.clear()
 
   const handewlform = (e) => {
-    e.preventDefault()
+     e.preventDefault()
+         setLoad(true)
+        console.log("error is");
+
     let data = {
       email: email,
       password: password
@@ -37,16 +43,25 @@ export default function Login() {
           if (res.data.data.userType == "2") {
             console.log("owner login!!");
             setTimeout(() => {
+              
+         setLoad(false)
               nav("/owner")
             }, 4000)
           }
         }
+
+
         else {
-          // toast.error(res?.data?.message)
+           setLoad(false)
+        toast.error(res.data.message)
+         console.log("error aya hai");   
         }
+
+
       })
       .catch((err) => {
-        console.log("err is", err);
+         setLoad(false)
+        console.log("error is", err);
         toast.error("Something went wrong!!")
       })
 
@@ -56,9 +71,12 @@ export default function Login() {
       <section className="featured-courses horizontal-column courses-wrap">
         <div className="container">
           <ToastContainer />
+             <BarLoader  cssOverride={{marginLeft:"45%"}}  loading={load}/>
           <div className="row">
+              {!load?
             <div className="col-12" style={{ border: "1.2px solid", paddingTop: "30px", paddingLeft: "10%", paddingRight: "10%", paddingBottom: "30px" }}>
 
+         
               <h4 style={{marginBottom:"30px"}}>Login</h4>
               <form className="" onSubmit={handewlform} >
                 <div className="container-fluid">
@@ -81,8 +99,9 @@ export default function Login() {
                 </div>
 
               </form>
-
+        
             </div>
+              :""}
           </div>
         </div>
       </section>
