@@ -40,7 +40,7 @@ export default function Header(){
                     <a href="#">Contact</a>
                   </li>
                      <li>
-                            <a href="#">Register</a>
+                            <Link to ="/register">Register</Link>
                           </li>
                           <li>
                             <Link to ="/login">Login</Link>
@@ -81,27 +81,19 @@ export default function Header(){
           <div className="col-12">
             <div className="hero-content-wrap flex flex-column justify-content-center align-items-start">
               <header className="entry-header">
-                <h4>Get started with online courses</h4>
+                {/* <h4>Get started with online courses</h4> */}
                 <h1>
-                  best online
+                  multiple stay
                   <br />
-                  Learning system
+                  booking site
                 </h1>
               </header>
               {/* .entry-header */}
               <div className="entry-content">
                 <p>
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia deserunt mollit anim id est laborum. Sed ut
-                  perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium
+                 you can book multiple type of sites for stay like/; hotel , PG (paying guest) , Dormitory
                 </p>
               </div>
-              {/* .entry-content */}
-              <footer className="entry-footer read-more">
-                <a href="#">read more</a>
-              </footer>
-              {/* .entry-footer */}
             </div>
             {/* .hero-content-wrap */}
           </div>

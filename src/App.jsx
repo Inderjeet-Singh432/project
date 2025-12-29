@@ -7,6 +7,9 @@ import Adminbody from './Admin/AdminBody'
 import Login from './Componets/Login'
 import OwnerBody from './Owner/OwnerBody'
 import OwnerMaster from './Owner/OwnerMaster'
+import Register from './Componets/Register'
+import AddProperty from './Owner/Componets/AddProperty'
+import FindProperty from './Owner/Componets/FindProperty'
 
 function App() {
      return (
@@ -16,6 +19,7 @@ function App() {
                          <Route path='/' element={<Master />}>
                               <Route path='/' element={<Body />}></Route>
                               <Route path='/login' element={<Login />}></Route>
+                              <Route path='/register' element={<Register />}></Route>
                          </Route>
 
                          <Route path='/admin' element={<AdminMaster />}>
@@ -24,6 +28,8 @@ function App() {
 
                          <Route path='/Owner' element={<OwnerMaster />}>
                               <Route path='/Owner' element={<OwnerBody />}></Route>
+                              <Route path='/Owner/addProperty' element={<AddProperty />}></Route>
+                              <Route path='/Owner/findProperty' element={<FindProperty />}></Route>
                          </Route>
                     </Routes>
                </BrowserRouter>
