@@ -12,8 +12,6 @@ export default function Register() {
 
   var nav = useNavigate()
 
-  sessionStorage.clear()
-
   const handewlform = (e) => {
     e.preventDefault()
     setLoad(true)

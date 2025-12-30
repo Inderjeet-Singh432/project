@@ -2,6 +2,16 @@ import axios from "axios";
 export const BaseUrl = "http://localhost:3434/";
 
 class ApiServices {
+    getToken(){
+      let token = sessionStorage.getItem("token")
+      const head = {
+        authorization:token
+
+      }
+      return {
+        headers: head
+      }
+    }
         Login(data) {
           return axios.post(BaseUrl + "apis/login", data)
         }
@@ -16,10 +26,10 @@ class ApiServices {
 
     //property  apis start
         propertyAdd(data) {    //owner prperty add  api
-          return axios.post(BaseUrl + "property/add", data)
+          return axios.post(BaseUrl + "owner/property/add", data, this.getToken())
         }
         propertyGetall() {    //owner prperty getall  api
-          return axios.post(BaseUrl + "property/getall")
+          return axios.post(BaseUrl + "owner/property/getall")
         }
     //property  apis end
     

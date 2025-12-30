@@ -81,10 +81,10 @@ export default function OwnerHeader() {
                                                 <a href="index.html">Home</a>
                                             </li>
                                             <li>
-                                                <Link to="/">About</Link>
+                                                <Link to="/Owner/findProperty/">Find-Property</Link>
                                             </li>
                                             <li>
-                                                <Link to="/Owner/addProperty/">Property</Link>
+                                                <Link to="/Owner/addProperty/">Add-Property</Link>
                                             </li>
                                             <li>
                                                 <Link to="/">blog</Link>

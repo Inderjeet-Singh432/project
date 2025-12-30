@@ -11,12 +11,9 @@ export default function Login() {
 
   var nav = useNavigate()
 
-  sessionStorage.clear()
-
   const handewlform = (e) => {
      e.preventDefault()
          setLoad(true)
-        console.log("error is");
 
     let data = {
       email: email,
@@ -24,24 +21,25 @@ export default function Login() {
     }
     ApiServices.Login(data)
       .then((res) => {
-        console.log("res is", res);
+        // console.log("res is", res);
         if (res?.data?.success) {
-          toast.success(res?.data?.message)
-          sessionStorage.setItem("_id", res?.data?.data?._id)
-          sessionStorage.setItem("name", res?.data?.data?.name)
+          toast.success(res?.data?.message) 
+          sessionStorage.setItem("userid", res?.data?.data?.userid)
           sessionStorage.setItem("email", res?.data?.data?.userEmail)
+          sessionStorage.setItem("token", res?.data?.token)
           sessionStorage.setItem("userType", res?.data?.data?.userType)
+
           setEmail("")
           setPassword("")
           if (res.data.data.userType == "1") {
-            console.log("admin login!!");
+            // console.log("admin login!!");
             setTimeout(() => {
               nav("/admin")
             }, 4000)
 
           }
           if (res.data.data.userType == "2") {
-            console.log("owner login!!");
+            // console.log("owner login!!");
             setTimeout(() => {
               
          setLoad(false)
@@ -54,7 +52,6 @@ export default function Login() {
         else {
            setLoad(false)
         toast.error(res.data.message)
-         console.log("error aya hai");   
         }
 
 
