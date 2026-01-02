@@ -28,8 +28,8 @@ class ApiServices {
         propertyAdd(data) {    //owner prperty add  api
           return axios.post(BaseUrl + "owner/property/add", data, this.getToken())
         }
-        propertyGetall() {    //owner prperty getall  api
-          return axios.post(BaseUrl + "owner/property/getall")
+        propertyGetall(data) {    //owner prperty getall  api
+          return axios.post(BaseUrl + "owner/property/getall",data)
         }
     //property  apis end
     

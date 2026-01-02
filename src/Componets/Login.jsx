@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { toast, ToastContainer } from "react-toastify"
 import ApiServices from "../ApiServices"
 import { BarLoader } from "react-spinners"
@@ -10,6 +10,14 @@ export default function Login() {
     var[load,setLoad]=useState(false)
 
   var nav = useNavigate()
+const cancel=(()=>{
+  toast.success("wait")
+  setLoad(true)
+         setTimeout(() => {
+              nav("/")
+            }, 4000)
+})
+
 
   const handewlform = (e) => {
      e.preventDefault()
@@ -63,6 +71,7 @@ export default function Login() {
       })
 
   }
+
   return (
     <>
       <section className="featured-courses horizontal-column courses-wrap">
@@ -91,8 +100,8 @@ export default function Login() {
                   />
                 </div>
                 <div className="d-flex justify-content-between">
-                  <button className="btn btn-primary" type='submit'style={{height:"40px", width:"100px", marginTop:"40px"}} >Submit</button>
-                  <Link to={"/"} className="btn btn-outline-primary d-flex justify-content-center" style={{height:"40px", width:"100px", marginTop:"40px"}} >cancel</Link>
+                  <button  className="btn btn-primary" type='submit'style={{height:"40px", width:"100px", marginTop:"40px"}} >Submit</button>
+                  <button onClick={cancel} className="btn btn-outline-primary d-flex justify-content-center" style={{height:"40px", width:"100px", marginTop:"40px"}} >cancel</button>
                 </div>
 
               </form>

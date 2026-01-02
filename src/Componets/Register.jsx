@@ -1,8 +1,10 @@
 import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { toast, ToastContainer } from "react-toastify"
 import ApiServices from "../ApiServices"
 import { BarLoader } from "react-spinners"
+import Swal from "sweetalert2"
+
 
 export default function Register() {
   var [name, setName] = useState("")
@@ -11,6 +13,33 @@ export default function Register() {
   var [load, setLoad] = useState(false)
 
   var nav = useNavigate()
+
+  const cancel = (() => {
+    Swal.fire({
+      title: "Are you sure to logout?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes!!"
+    })
+
+      .then((result) => {
+        if (result.isConfirmed) {
+          // sessionStorage.clear()
+        //  setTimeout(() => {
+          nav("/")
+        //  }, 4000);
+          Swal.fire({
+            title: "Logout!",
+            text: "Logout successfully!!!.",
+            icon: "success"
+          });
+
+        }
+      })
+  })
 
   const handewlform = (e) => {
     e.preventDefault()
@@ -55,6 +84,8 @@ export default function Register() {
       })
 
   }
+
+
   return (
     <>
       <section className="featured-courses horizontal-column courses-wrap">
@@ -92,7 +123,7 @@ export default function Register() {
 
                   <div className="d-flex justify-content-between">
                     <button className="btn btn-primary" type='submit' style={{ height: "40px", width: "100px", marginTop: "40px" }} >Submit</button>
-                    <Link to={"/"} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</Link>
+                    <button onClick={cancel} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</button>
                   </div>
 
                 </form>

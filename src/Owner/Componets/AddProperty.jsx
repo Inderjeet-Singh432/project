@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom"
 import { toast, ToastContainer } from "react-toastify"
 import ApiServices from "../../ApiServices"
 import { BarLoader } from "react-spinners"
+import Swal from "sweetalert2"
+
 
 export default function AddProperty() {
   var [siteName, setSiteName] = useState("")
@@ -15,8 +17,7 @@ export default function AddProperty() {
   var [licence, setLicence] = useState("")
   var [image, setImage] = useState("")
   var [load, setLoad] = useState(false)
-
-  // var nav = useNavigate()  
+    // var nav = useNavigate()  
 
   const handewlform = (e) => {
     e.preventDefault()
@@ -31,6 +32,7 @@ export default function AddProperty() {
     data.append("email", sessionStorage.getItem("email"))
     data.append("state", state)
     data.append("city", city)
+    data.append("userId", sessionStorage.getItem("userid"))
     data.append("pincode", pincode)
     data.append("licence", licence)
     data.append("image", image)
@@ -51,6 +53,9 @@ export default function AddProperty() {
             }
           }
         }
+        else{
+          toast.success(res?.data?.message)
+        }
       })
 
       .catch((err) => {
@@ -58,6 +63,18 @@ export default function AddProperty() {
         console.log(err);
       })
   }
+  const cancel=(()=>{
+         Swal.fire({
+  title: 'Error!',
+  text: 'Do you want to continue',
+  icon: 'error',
+  confirmButtonText: 'Cool'
+})
+
+// setTimeout(() => {
+//   to={"/owner"}
+// }, 1500);
+  })
   return (
     <>
       <section className="featured-courses horizontal-column courses-wrap">
@@ -148,7 +165,9 @@ export default function AddProperty() {
 
                   <div className="d-flex justify-content-between">
                     <button className="btn btn-primary" type='submit' style={{ height: "40px", width: "100px", marginTop: "40px" }} >Submit</button>
-                    <Link to={"/owner"} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</Link>
+                    <Link onClick={cancel}  className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</Link>
+                    {/* <Link onClick={cancel} to={"/owner"} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</Link> */}
+
                   </div>
 
                 </form>

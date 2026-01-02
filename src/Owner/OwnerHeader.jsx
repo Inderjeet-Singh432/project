@@ -125,7 +125,7 @@ export default function OwnerHeader() {
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <div className="hero-content-wrap flex flex-column justify-content-center align-items-start">
+                                <div className="hero-content-wrap flex flex-column justify-content-center align-items-start" style={{height:"500px"}}>
                                     <header className="entry-header">
                                         <h1>
                                             grow your

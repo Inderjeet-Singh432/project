@@ -78,9 +78,9 @@ export default function Header(){
     <div className="hero-content-overlay">
       <div className="container">
         <div className="row">
-          <div className="col-12">
-            <div className="hero-content-wrap flex flex-column justify-content-center align-items-start">
-              <header className="entry-header">
+          <div className="col-12" >
+            <div className="hero-content-wrap flex flex-column justify-content-center align-items-start"style={{height:"500px"}}>
+              <header className="entry-header" >
                 {/* <h4>Get started with online courses</h4> */}
                 <h1>
                   multiple stay
