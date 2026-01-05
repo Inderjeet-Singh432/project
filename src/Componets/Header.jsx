@@ -34,7 +34,7 @@ export default function Header(){
                     <a href="#">Courses</a>
                   </li>
                   <li>
-                    <a href="#">blog</a>
+                    <Link to={"/allproperty"}>View</Link>
                   </li>
                   <li>
                     <a href="#">Contact</a>

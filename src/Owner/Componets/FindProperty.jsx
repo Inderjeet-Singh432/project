@@ -10,14 +10,11 @@ export default function FindProperty() {
                 // console.log(res);
                 if (res?.data?.success) {
                     setData(res?.data?.data)
-                    // console.log(res);
                 }
                 else {
-                    // console.log("then block called but got error");
                 }
             })
             .catch((err) => {
-                // console.log("error is", err);
             })
     }, [])
 
@@ -26,7 +23,7 @@ export default function FindProperty() {
             <section className="featured-courses horizontal-column courses-wrap">
                 <div className="container">
                     <div className="row">
-                        <h1>find property</h1>
+                        <h1>find property/ all propertyes</h1>
                         <table className="table table-border-solid">
                             <thead>
                                 <tr>

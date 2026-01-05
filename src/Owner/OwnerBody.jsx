@@ -5,7 +5,6 @@ export default function OwnerBody() {
     var [data, setData] = useState([])
 
     useEffect(() => {
-
         ApiServices.propertyGetall({ email: sessionStorage.getItem("email") })
             .then((res) => {
                 if (res?.data?.success) {

@@ -28,9 +28,9 @@ export default function Register() {
       .then((result) => {
         if (result.isConfirmed) {
           // sessionStorage.clear()
-        //  setTimeout(() => {
+          //  setTimeout(() => {
           nav("/")
-        //  }, 4000);
+          //  }, 4000);
           Swal.fire({
             title: "Logout!",
             text: "Logout successfully!!!.",
@@ -52,7 +52,6 @@ export default function Register() {
     }
     ApiServices.register(data)
       .then((res) => {
-        // console.log("res is", res);
         if (res?.data?.success) {
           toast.success(res?.data?.message)
           sessionStorage.setItem("_id", res?.data?.data?._id)
@@ -61,25 +60,24 @@ export default function Register() {
           sessionStorage.setItem("userType", res?.data?.data?.userType)
           setEmail("")
           setPassword("")
+     
           if (res.data.data.userType == "2") {
-            // console.log("owner login!!");
             setTimeout(() => {
               setLoad(false)
               nav("/Owner")
             }, 4000)
           }
         }
+        
+
         else {
           setLoad(false)
           toast.error(res.data.message)
-          // console.log("error aya hai");
         }
+    })
 
-
-      })
       .catch((err) => {
         setLoad(false)
-        // console.log("error is", err);
         toast.error("Something went wrong!!")
       })
 
@@ -89,48 +87,49 @@ export default function Register() {
   return (
     <>
       <section className="featured-courses horizontal-column courses-wrap">
-        <div className="container">
-          <ToastContainer />
-          <BarLoader cssOverride={{ marginLeft: "45%" }} loading={load} />
-          <div className="row">
-            {!load ?
-              <div className="col-12" style={{ border: "1.2px solid", paddingTop: "30px", paddingLeft: "10%", paddingRight: "10%", paddingBottom: "30px" }}>
+        <div className="container" >
+          <div className="row ">
+           
+            <div className="col" >
+                <ToastContainer />
+                 <BarLoader cssOverride={{ marginLeft: "45%"}} loading={load} />
+              {!load ?
+                <div style={{ border: "1.2px solid", paddingTop: "30px", paddingLeft: "10%", paddingRight: "10%", paddingBottom: "30px" }}>
+                  <h4 style={{ marginBottom: "30px" }}>Register</h4>
+                  <form className="" onSubmit={handewlform} >
+                    <div className="container-fluid">
+                      <label className="form-label">Name</label>
+                      <input type="text" className="form-control" placeholder="enter your name"
+                        value={name}
+                        onChange={(e) => (setName(e.target.value))}
+                      />
+                    </div>
+                    <div className="container-fluid">
+                      <label className="form-label">Email address</label>
+                      <input type="email" className="form-control" placeholder="enter your email"
+                        value={email}
+                        onChange={(e) => (setEmail(e.target.value))}
+                      />
+                    </div>
+                    <div className="container-fluid">
+                      <label className="form-label">Password</label>
+                      <input type="password" className="form-control" placeholder="enter password"
+                        value={password}
+                        onChange={(e) => { setPassword(e.target.value) }}
+                      />
+                    </div>
 
+                    <div className="d-flex justify-content-between">
+                      <button className="btn btn-primary" type='submit' style={{ height: "40px", width: "100px", marginTop: "40px" }} >Submit</button>
+                      <button onClick={cancel} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</button>
+                    </div>
 
-                <h4 style={{ marginBottom: "30px" }}>Register</h4>
-                <form className="" onSubmit={handewlform} >
-                  <div className="container-fluid">
-                    <label className="form-label">Name</label>
-                    <input type="text" className="form-control" placeholder="enter your name"
-                      value={name}
-                      onChange={(e) => (setName(e.target.value))}
-                    />
-                  </div>
-                  <div className="container-fluid">
-                    <label className="form-label">Email address</label>
-                    <input type="email" className="form-control" placeholder="enter your email"
-                      value={email}
-                      onChange={(e) => (setEmail(e.target.value))}
-                    />
-                  </div>
-                  <div className="container-fluid">
-                    <label className="form-label">Password</label>
-                    <input type="password" className="form-control" placeholder="enter password"
-                      value={password}
-                      onChange={(e) => { setPassword(e.target.value) }}
-                    />
-                  </div>
-
-                  <div className="d-flex justify-content-between">
-                    <button className="btn btn-primary" type='submit' style={{ height: "40px", width: "100px", marginTop: "40px" }} >Submit</button>
-                    <button onClick={cancel} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</button>
-                  </div>
-
-                </form>
-
-              </div>
-              : ""}
+                  </form>
+                </div>
+                : ""}
+            </div>
           </div>
+
         </div>
       </section>
     </>

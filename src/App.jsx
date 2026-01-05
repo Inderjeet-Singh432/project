@@ -10,6 +10,7 @@ import OwnerMaster from './Owner/OwnerMaster'
 import Register from './Componets/Register'
 import AddProperty from './Owner/Componets/AddProperty'
 import FindProperty from './Owner/Componets/FindProperty'
+import AllProperty from './Componets/AllProperty'
 
 function App() {
      return (
@@ -20,6 +21,7 @@ function App() {
                               <Route path='/' element={<Body />}></Route>
                               <Route path='/login' element={<Login />}></Route>
                               <Route path='/register' element={<Register />}></Route>
+                              <Route path='/allproperty' element={<AllProperty />}></Route>
                          </Route>
 
                          <Route path='/admin' element={<AdminMaster />}>

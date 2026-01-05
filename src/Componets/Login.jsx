@@ -7,21 +7,21 @@ import { BarLoader } from "react-spinners"
 export default function Login() {
   var [email, setEmail] = useState("")
   var [password, setPassword] = useState("")
-    var[load,setLoad]=useState(false)
+  var [load, setLoad] = useState(false)
 
   var nav = useNavigate()
-const cancel=(()=>{
-  toast.success("wait")
-  setLoad(true)
-         setTimeout(() => {
-              nav("/")
-            }, 4000)
-})
+  const cancel = (() => {
+    toast.success("wait")
+    setLoad(true)
+    setTimeout(() => {
+      nav("/")
+    }, 4000)
+  })
 
 
   const handewlform = (e) => {
-     e.preventDefault()
-         setLoad(true)
+    e.preventDefault()
+    setLoad(true)
 
     let data = {
       email: email,
@@ -29,9 +29,8 @@ const cancel=(()=>{
     }
     ApiServices.Login(data)
       .then((res) => {
-        // console.log("res is", res);
         if (res?.data?.success) {
-          toast.success(res?.data?.message) 
+          toast.success(res?.data?.message)
           sessionStorage.setItem("userid", res?.data?.data?.userid)
           sessionStorage.setItem("email", res?.data?.data?.userEmail)
           sessionStorage.setItem("token", res?.data?.token)
@@ -40,36 +39,29 @@ const cancel=(()=>{
           setEmail("")
           setPassword("")
           if (res.data.data.userType == "1") {
-            // console.log("admin login!!");
             setTimeout(() => {
               nav("/admin")
             }, 4000)
-
           }
           if (res.data.data.userType == "2") {
-            // console.log("owner login!!");
             setTimeout(() => {
-              
-         setLoad(false)
+              setLoad(false)
               nav("/owner")
             }, 4000)
           }
         }
 
-
         else {
-           setLoad(false)
-        toast.error(res.data.message)
+          setLoad(false)
+          toast.error(res.data.message)
         }
-
-
       })
+
       .catch((err) => {
-         setLoad(false)
-        console.log("error is", err);
+        setLoad(false)
+        console.log("database is not conected", err);
         toast.error("Something went wrong!!")
       })
-
   }
 
   return (
@@ -77,37 +69,36 @@ const cancel=(()=>{
       <section className="featured-courses horizontal-column courses-wrap">
         <div className="container">
           <ToastContainer />
-             <BarLoader  cssOverride={{marginLeft:"45%"}}  loading={load}/>
+          <BarLoader cssOverride={{ marginLeft: "45%" }} loading={load} />
           <div className="row">
-              {!load?
-            <div className="col-12" style={{ border: "1.2px solid", paddingTop: "30px", paddingLeft: "10%", paddingRight: "10%", paddingBottom: "30px" }}>
+            {!load ?
+              <div className="col-12" style={{ border: "1.2px solid", paddingTop: "30px", paddingLeft: "10%", paddingRight: "10%", paddingBottom: "30px" }}>
 
-         
-              <h4 style={{marginBottom:"30px"}}>Login</h4>
-              <form className="" onSubmit={handewlform} >
-                <div className="container-fluid">
-                  <label className="form-label">Email address</label>
-                  <input type="email" className="form-control" placeholder="enter your email"
-                    value={email}
-                    onChange={(e) => (setEmail(e.target.value))}
-                  />
-                </div>
-                <div className="container-fluid">
-                  <label className="form-label">Password</label>
-                  <input type="password" className="form-control" placeholder="enter password"
-                    value={password}
-                    onChange={(e) => { setPassword(e.target.value) }}
-                  />
-                </div>
-                <div className="d-flex justify-content-between">
-                  <button  className="btn btn-primary" type='submit'style={{height:"40px", width:"100px", marginTop:"40px"}} >Submit</button>
-                  <button onClick={cancel} className="btn btn-outline-primary d-flex justify-content-center" style={{height:"40px", width:"100px", marginTop:"40px"}} >cancel</button>
-                </div>
+                <h4 style={{ marginBottom: "30px" }}>Login</h4>
+                <form className="" onSubmit={handewlform} >
+                  <div className="container-fluid">
+                    <label className="form-label">Email address</label>
+                    <input type="email" className="form-control" placeholder="enter your email"
+                      value={email}
+                      onChange={(e) => (setEmail(e.target.value))}
+                    />
+                  </div>
+                  <div className="container-fluid">
+                    <label className="form-label">Password</label>
+                    <input type="password" className="form-control" placeholder="enter password"
+                      value={password}
+                      onChange={(e) => { setPassword(e.target.value) }}
+                    />
+                  </div>
+                  <div className="d-flex justify-content-between">
+                    <button className="btn btn-primary" type='submit' style={{ height: "40px", width: "100px", marginTop: "40px" }} >Submit</button>
+                    <button onClick={cancel} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</button>
+                  </div>
 
-              </form>
-        
-            </div>
-              :""}
+                </form>
+
+              </div>
+              : ""}
           </div>
         </div>
       </section>

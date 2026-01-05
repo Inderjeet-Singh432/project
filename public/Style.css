@@ -177,3 +177,35 @@
 
 
 /* --------------------------------------------------- */
+.register-page-container {
+    background-image: url('/Assets/images/unnamed.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This keeps the image from scrolling */
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Optional: Add a subtle dark or light overlay so the form stands out */
+.register-page-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1); /* Light overlay */
+    z-index: 0;
+}
+
+.registration-card {
+    position: relative;
+    z-index: 1; /* Keeps form above the overlay */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}

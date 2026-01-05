@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import {  useNavigate } from "react-router-dom"
 import { toast, ToastContainer } from "react-toastify"
 import ApiServices from "../../ApiServices"
 import { BarLoader } from "react-spinners"
@@ -17,8 +17,35 @@ export default function AddProperty() {
   var [licence, setLicence] = useState("")
   var [image, setImage] = useState("")
   var [load, setLoad] = useState(false)
-    // var nav = useNavigate()  
 
+    var nav = useNavigate()  
+
+      const cancel = (() => {
+        Swal.fire({
+          title: "Are you sure to logout?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes!!"
+        })
+    
+          .then((result) => {
+            if (result.isConfirmed) {
+              // sessionStorage.clear()
+              //  setTimeout(() => {
+              nav("/")
+              //  }, 4000);
+              Swal.fire({
+                title: "Logout!",
+                text: "Logout successfully!!!.",
+                icon: "success"
+              });
+    
+            }
+          })
+      })
   const handewlform = (e) => {
     e.preventDefault()
     setLoad(true)
@@ -55,7 +82,12 @@ export default function AddProperty() {
         }
         else{
           toast.success(res?.data?.message)
-        }
+            setTimeout(() => {
+              setLoad(false)
+              nav("/Owner")
+            }, 4000)
+          }
+        
       })
 
       .catch((err) => {
@@ -63,18 +95,6 @@ export default function AddProperty() {
         console.log(err);
       })
   }
-  const cancel=(()=>{
-         Swal.fire({
-  title: 'Error!',
-  text: 'Do you want to continue',
-  icon: 'error',
-  confirmButtonText: 'Cool'
-})
-
-// setTimeout(() => {
-//   to={"/owner"}
-// }, 1500);
-  })
   return (
     <>
       <section className="featured-courses horizontal-column courses-wrap">
@@ -165,8 +185,7 @@ export default function AddProperty() {
 
                   <div className="d-flex justify-content-between">
                     <button className="btn btn-primary" type='submit' style={{ height: "40px", width: "100px", marginTop: "40px" }} >Submit</button>
-                    <Link onClick={cancel}  className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</Link>
-                    {/* <Link onClick={cancel} to={"/owner"} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</Link> */}
+                    <button onClick={cancel} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</button>
 
                   </div>
 
