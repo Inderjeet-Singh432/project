@@ -27,29 +27,7 @@ export default function OwnerBody() {
                     <div className="row">
 
                         <h1>your property`s</h1>
-                        <br />
-                        {/* <table className="table border-solid">
-                            <thead>
-                                <tr>
-                                    <th>Sr no.</th>
-                                    <th>Email</th>
-                                    <th>created at</th>
-                                </tr>
-                                {
-                                    data?.map((el, i) => (
-                                        <tr key={i}>
-                                            <td>{i}</td>
-                                            <td>{el?.email}</td>
-                                            <td>{el?.createdAt}</td>
-                                        </tr>
-                                    ))
-                                }
-                                   </thead>
-                        </table> */}
-
                             <div className="row" >
-                               
-                           
                                           {
                                     data?.map((el, i) => (
                                     <div key={i} className="col-4">

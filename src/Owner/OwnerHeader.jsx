@@ -78,7 +78,7 @@ export default function OwnerHeader() {
                                     <nav className="site-navigation flex justify-content-end align-items-center">
                                         <ul className="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                                             <li className="current-menu-item">
-                                                <a href="index.html">Home</a>
+                                                <Link to="/Owner/">Home</Link>
                                             </li>
                                             <li>
                                                 <Link to="/Owner/findProperty/">Find-Property</Link>
