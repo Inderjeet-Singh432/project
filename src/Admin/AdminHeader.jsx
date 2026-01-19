@@ -1,101 +1,8 @@
-// import { useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
-// import Swal from "sweetalert2";
-// import { Link } from 'react-router-dom';
-
 export default function AdminHeader(){
-
-//      var nav= useNavigate()
-     
-//       useEffect(()=>{
-//         let isLogin = sessionStorage.getItem('isLogin');
-//         if(!isLogin){
-//           nav("/")
-//         }
-//       },[])
-
-// function logoutfun(){
-//     Swal.fire({
-//   title: "Are you sure to logout?",
-//   text: "You won't be able to revert this!",
-//   icon: "warning",
-//   showCancelButton: true,
-//   confirmButtonColor: "#3085d6",
-//   cancelButtonColor: "#d33",
-//   confirmButtonText: "Yes!!"
-// }).then((result) => {
-//   if (result.isConfirmed) {
-//     sessionStorage.clear()
-//     // navigate to home page after logout
-//     nav("/")
-//     Swal.fire({
-//       title: "Logout!",
-//       text: "Logout successfully!!!.",
-//       icon: "success"
-//     });
-
-//   }
-// });
-
-  // }
-   
     return(
         <>
     <div className="hero-content">
     <header className="site-header">
-      <div className="top-header-bar">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-12 col-lg-6 d-none d-md-flex flex-wrap justify-content-center justify-content-lg-start mb-3 mb-lg-0">
-              <div className="header-bar-email d-flex align-items-center">
-                <i className="fa fa-envelope" />
-                <a href="#">tuanna.design@gmail.com</a>
-              </div>
-              {/* .header-bar-email */}
-              <div className="header-bar-text lg-flex align-items-center">
-                <p>
-                  <i className="fa fa-phone" />
-                  001-1234-88888{" "}
-                </p>
-              </div>
-              {/* .header-bar-text */}
-            </div>
-            {/* .col */}
-            <div className="col-12 col-lg-6 d-flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-              <div className="header-bar-search">
-                <form className="flex align-items-stretch">
-                  <input
-                    type="search"
-                    placeholder="What would you like to learn?"
-                  />
-                  <button
-                    type="submit"
-                    value=""
-                    className="flex justify-content-center align-items-center"
-                  >
-                    <i className="fa fa-search" />
-                  </button>
-                </form>
-              </div>
-              {/* .header-bar-search */}
-              <div className="header-bar-menu">
-                <ul className="flex justify-content-center align-items-center py-2 pt-md-0">
-                  <li>
-                    <a href="#">Register</a>
-                  </li>
-                  <li>
-          
-                  </li>
-                </ul>
-              </div>
-              {/* .header-bar-menu */}
-            </div>
-            {/* .col */}
-          </div>
-          {/* .row */}
-        </div>
-        {/* .container-fluid */}
-      </div>
 
       {/* .top-header-bar */}
       <div className="nav-bar">
@@ -116,16 +23,16 @@ export default function AdminHeader(){
               <nav className="site-navigation flex justify-content-end align-items-center">
                 <ul className="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                   <li className="current-menu-item">
-                    <a href="index.html">Home</a>
+                    <a href="">Home</a>
                   </li>
                   <li>
-                    <a href="#">About</a>
+                    <a href="#">Manage</a>
                   </li>
                   <li>
-                    <a href="#">Courses</a>
+                    <a href="#">Property</a>
                   </li>
                   <li>
-                    <a href="#">blog</a>
+                    <a href="#">Users</a>
                   </li>
                   <li>
                     <a href="#">Contact</a>
@@ -159,43 +66,21 @@ export default function AdminHeader(){
       {/* .nav-bar */}
     </header>
     {/* .site-header */}
-    <div className="hero-content-overlay">
+    <div className="hero-content-overlay" >
       <div className="container">
-        <div className="row">
+        <div className="row" >
           <div className="col-12">
-            <div className="hero-content-wrap flex flex-column justify-content-center align-items-start">
+            <div className="hero-content-wrap flex flex-column justify-content-center align-items-start" >
               <header className="entry-header">
-                <h4>Get started with online courses</h4>
                 <h1>
-                  best online
-                  <br />
-                  Learning system
+                  admin panel
                 </h1>
               </header>
-              {/* .entry-header */}
-              <div className="entry-content">
-                <p>
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia deserunt mollit anim id est laborum. Sed ut
-                  perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium
-                </p>
-              </div>
-              {/* .entry-content */}
-              <footer className="entry-footer read-more">
-                <a href="#">read more</a>
-              </footer>
-              {/* .entry-footer */}
             </div>
-            {/* .hero-content-wrap */}
           </div>
-          {/* .col */}
         </div>
-        {/* .row */}
       </div>
-      {/* .container */}
     </div>
-    {/* .hero-content-hero-content-overlay */}
   </div>
         </>
     )

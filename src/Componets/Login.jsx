@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { toast, ToastContainer } from "react-toastify"
 import ApiServices from "../ApiServices"
@@ -10,16 +10,18 @@ export default function Login() {
   var [load, setLoad] = useState(false)
 
   var nav = useNavigate()
+
   const cancel = (() => {
-    toast.success("wait")
     setLoad(true)
     setTimeout(() => {
+      sessionStorage.clear()
       nav("/")
-    }, 4000)
+    }, 1000)
   })
 
 
   const handewlform = (e) => {
+
     e.preventDefault()
     setLoad(true)
 
@@ -67,38 +69,42 @@ export default function Login() {
   return (
     <>
       <section className="featured-courses horizontal-column courses-wrap">
-        <div className="container">
+        <div className="container-fluid">
           <ToastContainer />
-          <BarLoader cssOverride={{ marginLeft: "45%" }} loading={load} />
+
           <div className="row">
-            {!load ?
-              <div className="col-12" style={{ border: "1.2px solid", paddingTop: "30px", paddingLeft: "10%", paddingRight: "10%", paddingBottom: "30px" }}>
+            <div className="col-5"></div>
 
-                <h4 style={{ marginBottom: "30px" }}>Login</h4>
-                <form className="" onSubmit={handewlform} >
-                  <div className="container-fluid">
-                    <label className="form-label">Email address</label>
-                    <input type="email" className="form-control" placeholder="enter your email"
-                      value={email}
-                      onChange={(e) => (setEmail(e.target.value))}
-                    />
-                  </div>
-                  <div className="container-fluid">
-                    <label className="form-label">Password</label>
-                    <input type="password" className="form-control" placeholder="enter password"
-                      value={password}
-                      onChange={(e) => { setPassword(e.target.value) }}
-                    />
-                  </div>
-                  <div className="d-flex justify-content-between">
-                    <button className="btn btn-primary" type='submit' style={{ height: "40px", width: "100px", marginTop: "40px" }} >Submit</button>
-                    <button onClick={cancel} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</button>
-                  </div>
+            <div className="col blur-overlay" style={{ marginTop: "-400px", border: "1.2px solid", paddingTop: "30px", paddingLeft: "5%", paddingRight: "5%", paddingBottom: "30px" }}>
+              <BarLoader cssOverride={{ marginTop:"25%" , marginLeft:"40%"}} loading={load} />
+              {!load ?
+                <div>
+                  <h4 style={{ marginBottom: "30px", color: "white" }}>Login</h4>
+                  <form className="" onSubmit={handewlform}  >
+                    <div className="container-fluid">
+                      <label className="form-label" style={{ color: "white" }}>Email address</label>
+                      <input type="email" className="form-control" placeholder="enter your email"
+                        value={email}
+                        onChange={(e) => (setEmail(e.target.value))}
+                      />
+                    </div>
+                    <div className="container-fluid">
+                      <label className="form-label" style={{ color: "white" }}>Password</label>
+                      <input type="password" className="form-control" placeholder="enter password"
+                        value={password}
+                        onChange={(e) => { setPassword(e.target.value) }} />
+                    </div>
+                    <div className="d-flex justify-content-between">
+                      <button className="btn btn-primary" type='submit' style={{ height: "40px", width: "100px", marginTop: "40px" }} >Submit</button>
+                      <button onClick={cancel} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</button>
+                    </div>
 
-                </form>
+                  </form>
+                </div>
+                : ""}
+            </div>
 
-              </div>
-              : ""}
+            <div className="col-1"></div>
           </div>
         </div>
       </section>

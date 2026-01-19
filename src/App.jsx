@@ -11,6 +11,8 @@ import Register from './Componets/Register'
 import AddProperty from './Owner/Componets/AddProperty'
 import FindProperty from './Owner/Componets/FindProperty'
 import AllProperty from './Componets/AllProperty'
+import Rooms from './Owner/Componets/Rooms'
+import ManageProperty from './Owner/Componets/ManageProperty'
 
 function App() {
      return (
@@ -31,7 +33,9 @@ function App() {
                          <Route path='/Owner' element={<OwnerMaster />}>
                               <Route path='/Owner' element={<OwnerBody />}></Route>
                               <Route path='/Owner/addProperty' element={<AddProperty />}></Route>
+                              <Route path='/Owner/rooms' element={<Rooms />}></Route>
                               <Route path='/Owner/findProperty' element={<FindProperty />}></Route>
+                              <Route path='/Owner/manageproperty/:id' element={<ManageProperty />}></Route>
                          </Route>
                     </Routes>
                </BrowserRouter>

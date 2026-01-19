@@ -15,7 +15,7 @@ export default function AddProperty() {
   var [city, setCity] = useState("")
   var [pincode, setPincode] = useState("")
   var [licence, setLicence] = useState("")
-  var [image, setImage] = useState("")
+  var [image, setImage] = useState(null)
   var [load, setLoad] = useState(false)
 
     var nav = useNavigate()  
@@ -46,6 +46,7 @@ export default function AddProperty() {
             }
           })
       })
+
   const handewlform = (e) => {
     e.preventDefault()
     setLoad(true)
@@ -70,15 +71,15 @@ export default function AddProperty() {
         if (res?.data?.success == false) {
 
           if (res?.data?.message?.length == null) {
-            // toast.error("sdfsdgdgdgddfff")
-            toast.error(res?.data?.message,)
+            toast.error(res?.data?.message)
           }
           else {
             for (let index = 0; index < res?.data?.message?.length; index++) {
               toast.error(res?.data?.message[index]);
               setLoad(false)
             }
-          }
+            toast.error(res?.data?.message)           
+          } 
         }
         else{
           toast.success(res?.data?.message)
@@ -86,8 +87,7 @@ export default function AddProperty() {
               setLoad(false)
               nav("/Owner")
             }, 4000)
-          }
-        
+          }        
       })
 
       .catch((err) => {
@@ -95,6 +95,10 @@ export default function AddProperty() {
         console.log(err);
       })
   }
+  
+    const handleImageChange = (e) => {
+    setImage(e.target.files[0]); // store image file
+  };
   return (
     <>
       <section className="featured-courses horizontal-column courses-wrap">
@@ -171,7 +175,10 @@ export default function AddProperty() {
                     <label className="form-label">Upload Image</label>
                     <input type="file" className="form-control" placeholder="uplode images of your property"
                       // value={image}
-                      onChange={(e) => (setImage(e.target.value))}
+                      // onChange={(e) => (setImage(e.target.value))}
+                          accept="image/*"
+                    onChange={handleImageChange}
+                    required
                     />
                   </div>
                   {/* licence  */}

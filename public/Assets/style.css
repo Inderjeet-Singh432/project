@@ -333,7 +333,7 @@ a:hover, a:active {
 # Hero Section
 --------------------------------------------------------------*/
 .hero-content {
-    background: url("images/hero-bg.jpg") no-repeat center;
+    background: url("images/p3.png") no-repeat center;
     background-size: cover;
 }
 
@@ -2717,4 +2717,14 @@ p.footer-copyright {
 
 .footer-bar-nav ul li a:hover {
     color: #34d986;
+}
+.blur-overlay {
+  background-color: rgba(255, 255, 255, 0.15); /* A semi-transparent background color */
+  border-radius: 10px;
+  padding: 20px;
+  /* Key CSS property for the blur effect behind the overlay */
+  backdrop-filter: blur(40px);
+  /* Optional: Add a slight border or shadow for better visual separation */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 }

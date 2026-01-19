@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Header(){
+  useEffect(()=>{
+    sessionStorage.clear()
+
+  },[])
     return(
         <>
   <div className="hero-content">
@@ -25,19 +30,16 @@ export default function Header(){
               <nav className="site-navigation flex justify-content-end align-items-center">
                 <ul className="flex flex-column flex-lg-row justify-content-lg-end align-content-center">
                   <li className="current-menu-item">
-                    <a href="index.html">Home</a>
+                      <Link to ="/">Home</Link>
                   </li>
                   <li>
-                    <a href="#">About</a>
+                    <Link to ="/">About</Link>
                   </li>
                   <li>
-                    <a href="#">Courses</a>
+                    <Link to={"/allproperty"}>booking</Link>
                   </li>
                   <li>
-                    <Link to={"/allproperty"}>View</Link>
-                  </li>
-                  <li>
-                    <a href="#">Contact</a>
+                      <Link to ="/">Contact</Link>
                   </li>
                      <li>
                             <Link to ="/register">Register</Link>
@@ -76,7 +78,7 @@ export default function Header(){
     
     {/* .site-header */}
     <div className="hero-content-overlay">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-12" >
             <div className="hero-content-wrap flex flex-column justify-content-center align-items-start"style={{height:"500px"}}>

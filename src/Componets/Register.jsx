@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { use, useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { toast, ToastContainer } from "react-toastify"
 import ApiServices from "../ApiServices"
@@ -13,7 +13,10 @@ export default function Register() {
   var [load, setLoad] = useState(false)
 
   var nav = useNavigate()
+useEffect(()=>{
+    sessionStorage.clear()
 
+},[])
   const cancel = (() => {
     Swal.fire({
       title: "Are you sure to logout?",
@@ -31,6 +34,7 @@ export default function Register() {
           //  setTimeout(() => {
           nav("/")
           //  }, 4000);
+          sessionStorage.clear()
           Swal.fire({
             title: "Logout!",
             text: "Logout successfully!!!.",
@@ -54,17 +58,17 @@ export default function Register() {
       .then((res) => {
         if (res?.data?.success) {
           toast.success(res?.data?.message)
-          sessionStorage.setItem("_id", res?.data?.data?._id)
-          sessionStorage.setItem("name", res?.data?.data?.name)
-          sessionStorage.setItem("email", res?.data?.data?.email)
-          sessionStorage.setItem("userType", res?.data?.data?.userType)
+          // sessionStorage.setItem("_id", res?.data?.data?._id)
+          // sessionStorage.setItem("name", res?.data?.data?.name)
+          // sessionStorage.setItem("email", res?.data?.data?.email)
+          // sessionStorage.setItem("userType", res?.data?.data?.userType)
           setEmail("")
           setPassword("")
      
           if (res.data.data.userType == "2") {
             setTimeout(() => {
               setLoad(false)
-              nav("/Owner")
+              nav("/login")
             }, 4000)
           }
         }
@@ -87,32 +91,32 @@ export default function Register() {
   return (
     <>
       <section className="featured-courses horizontal-column courses-wrap">
-        <div className="container" >
+        <div className="container-fluid" >
           <div className="row ">
-           
-            <div className="col" >
+           <div className="col-5"></div>
+            
                 <ToastContainer />
                  <BarLoader cssOverride={{ marginLeft: "45%"}} loading={load} />
               {!load ?
-                <div style={{ border: "1.2px solid", paddingTop: "30px", paddingLeft: "10%", paddingRight: "10%", paddingBottom: "30px" }}>
-                  <h4 style={{ marginBottom: "30px" }}>Register</h4>
+                <div className="col blur-overlay" style={{ marginTop:"-400px",border: "1.2px solid", paddingTop: "30px", paddingLeft: "5%", paddingRight: "5%", paddingBottom: "30px" }}>
+                  <h4 style={{ marginBottom: "30px",color:"white" }}>Register</h4>
                   <form className="" onSubmit={handewlform} >
                     <div className="container-fluid">
-                      <label className="form-label">Name</label>
+                      <label className="form-label" style={{color:"white"}}>Name</label>
                       <input type="text" className="form-control" placeholder="enter your name"
                         value={name}
                         onChange={(e) => (setName(e.target.value))}
                       />
                     </div>
                     <div className="container-fluid">
-                      <label className="form-label">Email address</label>
+                      <label className="form-label"  style={{color:"white"}}>Email address</label>
                       <input type="email" className="form-control" placeholder="enter your email"
                         value={email}
                         onChange={(e) => (setEmail(e.target.value))}
                       />
                     </div>
                     <div className="container-fluid">
-                      <label className="form-label">Password</label>
+                      <label className="form-label"style={{color:"white"}} >Password</label>
                       <input type="password" className="form-control" placeholder="enter password"
                         value={password}
                         onChange={(e) => { setPassword(e.target.value) }}
@@ -127,7 +131,8 @@ export default function Register() {
                   </form>
                 </div>
                 : ""}
-            </div>
+          
+           <div className="col-1"></div>
           </div>
 
         </div>

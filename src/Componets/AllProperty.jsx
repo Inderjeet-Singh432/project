@@ -26,24 +26,25 @@ export default function AllProperty() {
                         <div className="row" >
                             {
                                 data?.map((el, i) => (
-                                    <div key={i} style={{ margin: "10px" }}>
+                                    <div className="col-4"  key={i} style={{marginTop:"10px" ,marginBottom:"10px"}}>
                                         <div className="card-group">
                                             <div className="card">
-                                                <img src="public\Assets\images\3.jpg" className="card-img-top " style={{ height: "auto", widows: "auto" }} alt="..." />
+                                                {/* <img src="public\Assets\images\3.jpg" className="card-img-top " style={{ height: "auto", widows: "auto" }} alt="..." /> */}
+                                                    <img src={el?.image[0]} className="card-img-top" alt="image" />
+                                                
                                                 <div className="card-body">
-                                                    <h5 className="card-title">property name {el?.siteName}</h5>
-                                                    <p className="card-text">property type{el?.siteType}</p>
-                                                    <p className="card-text">description{el?.description}description</p>
-                                                    <p className="card-text">createdAt{el?.createdAt}</p>
-                                                    <p className="card-text">address{el?.address}</p>
+                                                    <h5 className="card-title">{el?.siteName}</h5>
+                                                    <p className="card-text">{el?.siteType}</p>
+                                                    <p className="card-text">{el?.description}</p>
+                                                    <p className="card-text">{el?.createdAt}</p>
+                                                    <p className="card-text">{el?.address}</p>
                                                 </div>
                                                 <div className="card-footer">
-                                                    <small className="text-body-secondary">Last updated 3 mins ago</small>
                                                     <button className="btn btn-primary">
-                                                        edit
+                                                        view
                                                     </button>
-                                                    <button className="btn btn-danger" style={{ marginLeft: "10px" }}>
-                                                        delete
+                                                    <button className="btn btn-primary" style={{ marginLeft: "10px" }}>
+                                                        Book now
                                                     </button>
                                                 </div>
                                             </div>
