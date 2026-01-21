@@ -32,7 +32,7 @@ export default function Login() {
     ApiServices.Login(data)
       .then((res) => {
         if (res?.data?.success) {
-          toast.success(res?.data?.message)
+          alert(res?.data?.message)
           sessionStorage.setItem("userid", res?.data?.data?.userid)
           sessionStorage.setItem("email", res?.data?.data?.userEmail)
           sessionStorage.setItem("token", res?.data?.token)
@@ -43,7 +43,7 @@ export default function Login() {
           if (res.data.data.userType == "1") {
             setTimeout(() => {
               nav("/admin")
-            }, 4000)
+            }, 1000)
           }
           if (res.data.data.userType == "2") {
             setTimeout(() => {
@@ -86,13 +86,16 @@ export default function Login() {
                       <input type="email" className="form-control" placeholder="enter your email"
                         value={email}
                         onChange={(e) => (setEmail(e.target.value))}
+                        required
                       />
                     </div>
                     <div className="container-fluid">
                       <label className="form-label" style={{ color: "white" }}>Password</label>
                       <input type="password" className="form-control" placeholder="enter password"
                         value={password}
-                        onChange={(e) => { setPassword(e.target.value) }} />
+                        onChange={(e) => { setPassword(e.target.value) }}
+                        required
+                        />
                     </div>
                     <div className="d-flex justify-content-between">
                       <button className="btn btn-primary" type='submit' style={{ height: "40px", width: "100px", marginTop: "40px" }} >Submit</button>

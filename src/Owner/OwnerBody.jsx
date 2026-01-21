@@ -6,7 +6,6 @@ import ResponsivePagination from 'react-responsive-pagination';
 export default function OwnerBody() {
     var [data, setData] = useState([])
     let [totalpages, settotalpages] = useState([])
-    var [property, setProperty] = useState([])
     const [currentPage, setCurrentPage] = useState(1);
     const limit = 3
 
@@ -20,7 +19,6 @@ export default function OwnerBody() {
                     setData(res?.data?.data)
                     console.log(res?.data?.data);
                     settotalpages(Math.ceil(res?.data?.data?.length / limit))
-
                 }
                 else {
                     console.log("then block called but got error");

@@ -13,6 +13,7 @@ import FindProperty from './Owner/Componets/FindProperty'
 import AllProperty from './Componets/AllProperty'
 import Rooms from './Owner/Componets/Rooms'
 import ManageProperty from './Owner/Componets/ManageProperty'
+import Booking from './Owner/Booking/Booking'
 
 function App() {
      return (
@@ -24,6 +25,7 @@ function App() {
                               <Route path='/login' element={<Login />}></Route>
                               <Route path='/register' element={<Register />}></Route>
                               <Route path='/allproperty' element={<AllProperty />}></Route>
+                              <Route path='/booking/:id' element={<Booking />}></Route>
                          </Route>
 
                          <Route path='/admin' element={<AdminMaster />}>
