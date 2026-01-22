@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Master from './Componets/Master'
 import Body from './Componets/Body'
 import AdminMaster from './Admin/AdminMaster'
-import Adminbody from './Admin/AdminBody'
 import Login from './Componets/Login'
 import OwnerBody from './Owner/OwnerBody'
 import OwnerMaster from './Owner/OwnerMaster'
@@ -14,6 +13,9 @@ import AllProperty from './Componets/AllProperty'
 import Rooms from './Owner/Componets/Rooms'
 import ManageProperty from './Owner/Componets/ManageProperty'
 import Booking from './Owner/Booking/Booking'
+import BodyMaster from './Admin/AdminBodyMaster/BodyMaster'
+import MainBody from './Admin/AdminBodyMaster/MainBody'
+import Sidebar from './Admin/AdminBodyMaster/Sidebar'
 
 function App() {
      return (
@@ -29,7 +31,10 @@ function App() {
                          </Route>
 
                          <Route path='/admin' element={<AdminMaster />}>
-                              <Route path='/admin' element={<Adminbody />}></Route>
+                                        <Route path='/admin/' element={<BodyMaster/>}>
+                                             <Route path='/admin/' element={<MainBody/>}></Route>
+                                             <Route path='/admin/' element={<Sidebar/>}></Route>
+                                        </Route>
                          </Route>
 
                          <Route path='/Owner' element={<OwnerMaster />}>

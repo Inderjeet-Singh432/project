@@ -22,9 +22,9 @@ export default function ManageProperty() {
     const Data = {
         _id: id
     }
-
+    
+    //property get single api
 useEffect((e) => {
-        //property get single api
         ApiServices.getSingle(Data)
             .then((res) => {
                 console.log("response is ", res?.data?.data);
