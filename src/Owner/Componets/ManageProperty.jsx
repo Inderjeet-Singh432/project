@@ -22,7 +22,6 @@ export default function ManageProperty() {
     const Data = {
         _id: id
     }
-    
     //property get single api
 useEffect((e) => {
         ApiServices.getSingle(Data)

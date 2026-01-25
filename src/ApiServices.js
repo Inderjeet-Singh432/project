@@ -11,7 +11,10 @@ class ApiServices {
           return axios.post(BaseUrl + "apis/login", data)
         }
 
-    //owner api start
+    //owner------------------------------------------------------ api start
+        OwnerGetSingle(data){
+          return axios.post(BaseUrl +"/owner/getsingle",data)
+        }
         OwnerGetall() {
           return axios.post(BaseUrl + "owner/getall")
         }
@@ -19,9 +22,13 @@ class ApiServices {
         register(data) {    //owner register api
           return axios.post(BaseUrl + "owner/register", data)
         }
-    //owner api end
+        
+        changeStatus(data){
+          return axios.post(BaseUrl+"admin/owner/changeStatus",data)
+        }
+    //owner------------------------------------------------------ api end
 
-    //property  apis start
+    //property ------------------------------------------------------ apis start
         propertyAdd(data) {    //owner prperty add  api
           return axios.post(BaseUrl + "owner/property/add", data, this.getToken())
         }
@@ -40,7 +47,7 @@ class ApiServices {
         PHardDelete(data){         //owner prperty delete  api
           return axios.post(BaseUrl+"owner/property/hardDelete",data)
         }
-    //property  apis end
+    //property ------------------------------------------------------ apis end
     
 
 }

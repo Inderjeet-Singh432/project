@@ -2,34 +2,34 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2"
 
 export default function OwnerHeader() {
-      var nav = useNavigate()
-      
-    const abc=(()=>{
-           Swal.fire({
-             title: "Are you sure to logout?",
-             text: "You won't be able to revert this!",
-             icon: "warning",
-             showCancelButton: true,
-             confirmButtonColor: "#3085d6",
-             cancelButtonColor: "#d33",
-             confirmButtonText: "Yes!!"
-           })
-       
-             .then((result) => {
-               if (result.isConfirmed) {
-                 // sessionStorage.clear()
-                 //  setTimeout(() => {
-                 nav("/")
-                 //  }, 4000);
-                 Swal.fire({
-                   title: "Logout!",
-                   text: "Logout successfully",
-                   icon: "success"
-                 });
-       
-               }
-             })
-        
+    var nav = useNavigate()
+
+    const abc = (() => {
+        Swal.fire({
+            title: "Are you sure to logout?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes!!"
+        })
+
+            .then((result) => {
+                if (result.isConfirmed) {
+                    // sessionStorage.clear()
+                    //  setTimeout(() => {
+                    nav("/")
+                    //  }, 4000);
+                    Swal.fire({
+                        title: "Logout!",
+                        text: "Logout successfully",
+                        icon: "success"
+                    });
+
+                }
+            })
+
     })
     return (
         <>
@@ -117,7 +117,7 @@ export default function OwnerHeader() {
                                                 <Link to="/Owner/addProperty/">Add-Property</Link>
                                             </li>
                                             <li>
-                                                <Link to="/">Profile</Link>
+                                                <Link to="/owner">Profile</Link>
                                             </li>
                                         </ul>
                                         <div className="hamburger-menu d-lg-none">
@@ -132,8 +132,8 @@ export default function OwnerHeader() {
                                                 href="#"
                                                 className="flex justify-content-center align-items-center"
                                                 onClick={abc}
-                                                style={{width:"60px"}}      >
-                                                    Log out
+                                                style={{ width: "60px" }}      >
+                                                Log out
                                             </a>
                                         </div>
                                         {/* .header-bar-search */}
@@ -153,7 +153,7 @@ export default function OwnerHeader() {
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <div className="hero-content-wrap flex flex-column justify-content-center align-items-start" style={{height:"500px"}}>
+                                <div className="hero-content-wrap flex flex-column justify-content-center align-items-start" style={{ height: "500px" }}>
                                     <header className="entry-header">
                                         <h1>
                                             grow your
@@ -164,7 +164,7 @@ export default function OwnerHeader() {
                                     {/* .entry-header */}
                                     <div className="entry-content">
                                         <p>
-                                           you can add your propertys for
+                                            you can add your propertys for
                                         </p>
                                     </div>
                                 </div>

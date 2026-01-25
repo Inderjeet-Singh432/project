@@ -58,7 +58,8 @@ export default function OwnerBody() {
                                                         <div className="row">
                                                             <div className="col">
                                                                 <Link className="btn btn-outline-primary d-flex justify-content-center" to={"/owner/manageproperty/" + el?._id}
-                                                                    style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px" }}                                                                     >Manage</Link>
+                                                                    style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px" }}
+                                                                    >Manage</Link>
                                                             </div>
                                                             <div className="col">
                                                                 <Link className="btn btn-outline-primary d-flex justify-content-center" to={"/owner/manageproperty/" + el?._id}

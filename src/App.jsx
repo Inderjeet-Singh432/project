@@ -14,8 +14,9 @@ import Rooms from './Owner/Componets/Rooms'
 import ManageProperty from './Owner/Componets/ManageProperty'
 import Booking from './Owner/Booking/Booking'
 import BodyMaster from './Admin/AdminBodyMaster/BodyMaster'
-import MainBody from './Admin/AdminBodyMaster/MainBody'
-import Sidebar from './Admin/AdminBodyMaster/Sidebar'
+import AllOwners from './Admin/AdminBodyMaster/AllOwners'
+import ManageUsers from './Admin/AdminBodyMaster/ManageUsers'
+import DeleteOwner from './Admin/Componets/DeleteOwner'
 
 function App() {
      return (
@@ -32,11 +33,12 @@ function App() {
 
                          <Route path='/admin' element={<AdminMaster />}>
                                         <Route path='/admin/' element={<BodyMaster/>}>
-                                             <Route path='/admin/' element={<MainBody/>}></Route>
-                                             <Route path='/admin/' element={<Sidebar/>}></Route>
+                                             <Route path='/admin/owners' element={<AllOwners/>}></Route>
+                                             <Route path='/admin/manage' element={<ManageUsers/>}></Route>
+                                             <Route path='/admin/delete/:id' element={<DeleteOwner/>}></Route>
                                         </Route>
                          </Route>
-
+                         
                          <Route path='/Owner' element={<OwnerMaster />}>
                               <Route path='/Owner' element={<OwnerBody />}></Route>
                               <Route path='/Owner/addProperty' element={<AddProperty />}></Route>
