@@ -17,6 +17,8 @@ import BodyMaster from './Admin/AdminBodyMaster/BodyMaster'
 import AllOwners from './Admin/AdminBodyMaster/AllOwners'
 import ManageUsers from './Admin/AdminBodyMaster/ManageUsers'
 import DeleteOwner from './Admin/Componets/DeleteOwner'
+import AdminAllProperty from './Admin/Componets/AdminAllProperty'
+import ManageBooking from './Admin/Componets/ManageBooking'
 
 function App() {
      return (
@@ -35,6 +37,8 @@ function App() {
                                         <Route path='/admin/' element={<BodyMaster/>}>
                                              <Route path='/admin/owners' element={<AllOwners/>}></Route>
                                              <Route path='/admin/manage' element={<ManageUsers/>}></Route>
+                                             <Route path='/admin/property' element={<AdminAllProperty/>}></Route>
+                                             <Route path='/admin/managebooking' element={<ManageBooking/>}></Route>
                                              <Route path='/admin/delete/:id' element={<DeleteOwner/>}></Route>
                                         </Route>
                          </Route>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import ApiServices from "../../ApiServices"
+import ReactModal from "react-modal"
 
 export default function Booking() {
     var [siteName, setSiteName] = useState("")
@@ -78,7 +79,7 @@ export default function Booking() {
                                                 </div>
                                             </div>
                                         </div>
-
+                                        
                                     </div>
                                 </div>
                             </div>
