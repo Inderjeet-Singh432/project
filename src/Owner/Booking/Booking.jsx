@@ -3,6 +3,20 @@ import { Link, useParams } from "react-router-dom"
 import ApiServices from "../../ApiServices"
 import ReactModal from "react-modal"
 
+
+import React from "react";
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+    },
+};
+
+
 export default function Booking() {
     var [siteName, setSiteName] = useState("")
     var [siteType, setSiteType] = useState("")
@@ -26,7 +40,7 @@ export default function Booking() {
         //property get single api
         ApiServices.getSingle(Data)
             .then((res) => {
-                console.log("response is ", res?.data?.data);
+                // console.log("response is ", res?.data?.data);
                 setSiteName(res?.data?.data?.siteName)
                 setSiteType(res?.data?.data?.siteType)
                 setAddress(res?.data?.data?.address)
@@ -38,10 +52,51 @@ export default function Booking() {
                 setImage(res?.data?.data?.image)
             })
             .catch((err) => {
-                console.log("error is", err);
+                // console.log("error is", err);
             })
     }, [])
 
+
+      const buy = async (amt2) => {
+        //   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>  CND LINK
+        const options = {
+            key: "rzp_test_Q8bKRaQdmgftXW", // Replace with your Razorpay key
+            amount: amt2 * 100, // Amount in paise (₹500 = 50000)
+            currency: "INR",            
+            name: "ABC",
+            description: "Test Transaction",
+            handler:async function (response) {
+                // success
+                console.log(response);
+            },
+            prefill: {
+                name: "Arshpreet Singh",
+                email: "arsh@example.com",
+                contact: "9999999999",
+            },
+            notes: {
+                address: "Test Address",
+            },
+            theme: {
+                color: "#33cca3ff",
+            },
+        };
+        const rzp = new window.Razorpay(options);
+        rzp.open();
+        return options
+    };
+
+    // const [modalIsOpen, setIsOpen] = useState(false);
+    // function openModal() {
+    //     setIsOpen(true);
+    // }
+    // function closeModal() {
+    //     setIsOpen(false);
+    // }
+    // function buy(){
+    //     console.log("abcdefjsndvjksdnfjn");
+        
+    // }
     return (
         <>
             <section className="featured-courses horizontal-column courses-wrap">
@@ -69,21 +124,33 @@ export default function Booking() {
                                                 </div>
                                                 <div className="col">
                                                     <Link className="btn btn-outline-primary d-flex justify-content-center"
-                                                    style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px" }}
-                                                  
+                                                        style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px" }}
+                                                        onClick={buy}
                                                     >Book now</Link>
-                                                     <Link className="btn btn-outline-primary d-flex justify-content-center"
-                                                    style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px" }}
-                                                    to={"/"}
+                                                    <Link className="btn btn-outline-primary d-flex justify-content-center"
+                                                        style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px" }}
+                                                        to={"/allproperty"}
                                                     >Back</Link>
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        {/* <ReactModal
+                            isOpen={modalIsOpen}
+                            onRequestClose={closeModal}
+                            style={customStyles}
+                            contentLabel="Example Modal"
+                        >
+
+                            <div>this is a modal</div>
+                            <button className="btn btn-outline-primary" onClick={closeModal}>close</button>
+
+                        </ReactModal> */}
                     </div>
                 </div>
             </section>

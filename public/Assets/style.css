@@ -195,7 +195,7 @@ a:hover, a:active {
     color: #fff;
     text-decoration: none;
 }
-
+/* -----------------------------------------------------------------------------------header  */
 .site-title a span {
     color: #19c880;
 }
@@ -306,7 +306,7 @@ a:hover, a:active {
         background: transparent;
     }
 }
-
+/* -----------------------------------------------------------------------------------header  */
 .site-navigation ul li a:hover,
 .site-navigation ul li.current-menu-item a {
     color: #19c880;
@@ -446,7 +446,7 @@ a:hover, a:active {
 
 .icon-box .icon {
     font-size: 42px;
-    color: #19c880;
+    color: #0c381982;
 }
 
 .icon-box .entry-title {
@@ -464,8 +464,8 @@ a:hover, a:active {
     position: relative;
     padding-right: 10px;
     font-size: 13px;
-    font-weight: 700;
-    color: #19c880;
+    font-weight: 800;
+    color: #0c381982;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -2727,4 +2727,26 @@ p.footer-copyright {
   /* Optional: Add a slight border or shadow for better visual separation */
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+
+
+
+
+
+
+/* Container to hide the image parts that go outside the box */
+.img-hover-zoom {
+  overflow: hidden; 
+  border-radius: 20px; /* Matching your requested style */
+}
+
+.img-hover-zoom img {
+  transition: transform 0.5s ease;
+  transform: scale(1.2); /* Image starts slightly zoomed in */
+}
+
+/* On hover, scale back to original size (zoom out effect) */
+.img-hover-zoom:hover img {
+  transform: scale(1);
 }

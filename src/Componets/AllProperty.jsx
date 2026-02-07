@@ -14,17 +14,14 @@ export default function AllProperty() {
     useEffect(() => {
         ApiServices.propertyGetall()
             .then((res) => {
-                console.log(res);
+                // console.log(res);
                 if (res?.data?.success) {
                     setData(res?.data?.data)
                     settotalpages(Math.ceil(res?.data?.data?.length / limit))
-
                 }
-
             })
             .catch((err) => {
-                console.log(err);
-
+                // console.log(err);
             })
     }, [])
     return (
@@ -54,7 +51,7 @@ export default function AllProperty() {
 
                                                         <div className="row">
                                                             <div className="col">
-                                                                <Link className="btn btn-outline-primary d-flex justify-content-center" to={"/booking/" + el?._id}
+                                                                <Link className="btn btn-outline-primary d-flex justify-content-center rounded-circle overflow-hidden" to={"/booking/" + el?._id}
                                                                     style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px" }}
                                                                 >View</Link>
                                                             </div>

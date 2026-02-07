@@ -1,10 +1,10 @@
 export default function Footer(){
     return(
         <>
-         <footer className="site-footer">
+         <footer className="site-footer"style={{backgroundColor:"#f7f7f7"}} >
     <div className="footer-widgets">
       <div className="container">
-        <div className="row">
+        <div className="row " style={{backgroundColor:"#dbedf3",padding:"30px",color:"#e2f0f5", borderRadius: "100px"}}>
           <div className="col-12 col-md-6 col-lg-3">
             <div className="foot-about">
               <a className="foot-logo" href="#">
@@ -104,48 +104,8 @@ export default function Footer(){
           </div>
           {/* .col */}
         </div>
-        {/* .row */}
       </div>
-      {/* .container */}
     </div>
-    {/* .footer-widgets */}
-    <div className="footer-bar">
-      <div className="container">
-        <div className="row flex-wrap justify-content-center justify-content-lg-between align-items-center">
-          <div className="col-12 col-lg-6">
-            <div className="download-apps flex flex-wrap justify-content-center justify-content-lg-start align-items-center">
-              <a href="#">
-                <img src="/Assets2/images/app-store.png" alt="" />
-              </a>
-              <a href="#">
-                <img src="/Assets2/images/play-store.png" alt="" />
-              </a>
-            </div>
-            {/* .download-apps */}
-          </div>
-          <div className="col-12 col-lg-6 mt-4 mt-lg-0">
-            <div className="footer-bar-nav">
-              <ul className="flex flex-wrap justify-content-center justify-content-lg-end align-items-center">
-                <li>
-                  <a href="#">DPA</a>
-                </li>
-                <li>
-                  <a href="#">Terms of Use</a>
-                </li>
-                <li>
-                  <a href="#">Privacy Policy</a>
-                </li>
-              </ul>
-            </div>
-            {/* .footer-bar-nav */}
-          </div>
-          {/* .col-12 */}
-        </div>
-        {/* .row */}
-      </div>
-      {/* .container */}
-    </div>
-    {/* .footer-bar */}
   </footer>
         </>
     )
