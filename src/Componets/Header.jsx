@@ -129,7 +129,7 @@ export default function Header() {
                       onClick={() => setIsActive(!isActive)}
                     >
                       <div className="col-1">
-                        <i class="bi bi-calendar4-event"></i>
+                        <i className="bi bi-calendar4-event"></i>
                       </div>
                       <div className="col">
                         <p>select date</p>
@@ -142,7 +142,7 @@ export default function Header() {
                       onClick={() => setIsActive(!isActive)}
                     >
                       <div className="col-1">
-                        <i class="bi bi-person-plus"></i>
+                        <i className="bi bi-person-plus"></i>
                       </div>
                       <div className="col">
                         <p>guests and room</p>

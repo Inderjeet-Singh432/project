@@ -17,15 +17,15 @@ export default function OwnerBody() {
             .then((res) => {
                 if (res?.data?.success) {
                     setData(res?.data?.data)
-                    console.log(res?.data?.data);
+                    // console.log(res?.data?.data);
                     settotalpages(Math.ceil(res?.data?.data?.length / limit))
                 }
                 else {
-                    console.log("then block called but got error");
+                    // console.log("then block called but got error");
                 }
             })
             .catch((err) => {
-                console.log("error is", err);
+                // console.log("error is", err);
             })
     }, [])
 
@@ -43,7 +43,7 @@ export default function OwnerBody() {
                                         <div className="card " >
 
                                             <div className="row">
-                                                <div className="col-4">
+                                                <div className="col-4 img-hover-zoom">
                                                     <img src={el?.image[0]} className="card-img-top" alt="image" />
                                                 </div>
 

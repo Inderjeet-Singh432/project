@@ -6,6 +6,9 @@ import ResponsivePagination from 'react-responsive-pagination';
 export default function AllProperty() {
     var [data, setData] = useState()
     let [totalpages, settotalpages] = useState([])
+    let [hotel, setHottel] = useState([])
+    let [pg, setpg] = useState([])
+    let [dormintory, setDormintory] = useState([])
     const [currentPage, setCurrentPage] = useState(1);
     const limit = 10
 
@@ -17,7 +20,7 @@ export default function AllProperty() {
                 // console.log(res);
                 if (res?.data?.success) {
                     setData(res?.data?.data)
-                    settotalpages(Math.ceil(res?.data?.data?.length / limit))
+                    settotalpages(Math.ceil(res?.data?.data?.length / limit))                
                 }
             })
             .catch((err) => {
@@ -29,7 +32,6 @@ export default function AllProperty() {
             <section className="featured-courses horizontal-column courses-wrap">
                 <div className="container">
                     <div className="row" >
-                        <h1>all property / booking</h1>
                         <div className="row" >
                             {
                                 data?.slice((currentPage - 1) * limit, ((currentPage - 1) * limit) + limit).map((el, i) => (
@@ -37,7 +39,7 @@ export default function AllProperty() {
                                         <div className="card " >
 
                                             <div className="row">
-                                                <div className="col-4">
+                                                <div className="col-4  img-hover-zoom">
                                                     <img src={el?.image[0]} className="card-img-top" alt="image" />
                                                 </div>
 

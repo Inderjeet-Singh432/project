@@ -18,10 +18,10 @@ export default function ManageProperty() {
     let { id } = useParams()
     const abParam = useParams()
     // console.log(abParam.id);
-
     const Data = {
         _id: id
     }
+    
     //property get single api
 useEffect((e) => {
         ApiServices.getSingle(Data)
@@ -45,6 +45,32 @@ useEffect((e) => {
             })
     },[])
 
+     useEffect((e) => {
+            // Swal.fire({
+            //     title: "Are you sure to delete this property via itself",
+            //     //  text: "You won't be able to revert this!",
+            //     icon: "question",
+            //     showCancelButton: true,
+            //     confirmButtonColor: "#3085d6",
+            //     cancelButtonColor: "#d33",
+            //     confirmButtonText: "Yes!!"
+            // })
+    
+            //     .then((result) => {
+            //         if (result.isConfirmed) {
+            //             AdminApiServices.PHardDelete(Data)
+            //                 .then((res) => {
+            //                     // console.log(res?.data?.data);
+            //                     setOwnerId(res?.data?.data?._id)
+            //                 })
+            //                 .catch((err) => {
+            //                     // console.log(err);
+            //                 })
+            //         }
+            //     })
+    console.log("abcdefgh");
+    
+        }, [])
     return (
         <>
             <section className="latest-news-events">

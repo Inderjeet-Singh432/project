@@ -56,58 +56,63 @@ export default function Booking() {
             })
     }, [])
 
+    const loadRazorpay = () => {
+        return new Promise((resolve) => {
+            const script = document.createElement("script");
+            script.src = "https://checkout.razorpay.com/v1/checkout.js";
+            script.async = true;
+            script.onload = () => {
+                resolve(true);
+            };
+            script.onerror = () => {
+                resolve(false);
+            };
+            document.body.appendChild(script);
+        });
+    };
 
-      const buy = async (amt2) => {
-        //   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>  CND LINK
+    const buy = async (amt2) => {
+        const isLoaded = await loadRazorpay();
+
+        if (!isLoaded) {
+            alert("Failed to load Razorpay SDK. Please check your internet connection.");
+            return;
+        }
+
         const options = {
-            key: "rzp_test_Q8bKRaQdmgftXW", // Replace with your Razorpay key
-            amount: amt2 * 100, // Amount in paise (₹500 = 50000)
-            currency: "INR",            
+            key: "rzp_test_Q8bKRaQdmgftXW",
+            amount: amt2 * 100,
+            currency: "INR",
             name: "ABC",
             description: "Test Transaction",
-            handler:async function (response) {
-                // success
-                console.log(response);
+            handler: async function (response) {
+                console.log("Payment Success:", response);
             },
             prefill: {
                 name: "Arshpreet Singh",
                 email: "arsh@example.com",
                 contact: "9999999999",
             },
-            notes: {
-                address: "Test Address",
-            },
             theme: {
-                color: "#33cca3ff",
+                color: "#33cca3",
             },
         };
+
         const rzp = new window.Razorpay(options);
         rzp.open();
-        return options
     };
 
-    // const [modalIsOpen, setIsOpen] = useState(false);
-    // function openModal() {
-    //     setIsOpen(true);
-    // }
-    // function closeModal() {
-    //     setIsOpen(false);
-    // }
-    // function buy(){
-    //     console.log("abcdefjsndvjksdnfjn");
-        
-    // }
     return (
         <>
             <section className="featured-courses horizontal-column courses-wrap">
                 <div className="container">
                     <div className="row" style={{ backgroundColor: "#f5f7f6" }}>
-                        <h1>booking page</h1>
+                        <h1></h1>
                         <div className="row" style={{ width: "100%" }}>
                             <div className="col-12">
                                 <div className="card"  >
                                     <div className="row">
-                                        <div className="col-4" >
+                                        <div className="col-4 img-hover-zoom" >
                                             <img src={image} alt="image" className="img-fluid" style={{ width: "100%", height: "auto" }} />
                                         </div>
 

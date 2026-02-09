@@ -106,7 +106,7 @@ export default function AddProperty() {
           <ToastContainer />
           <BarLoader cssOverride={{ marginLeft: "45%" }} loading={load} />
           <div className="row">
-            <h1>add property</h1>
+            <h1>add new property</h1>
             {!load ?
               <div className="col-12" style={{ border: "1.2px solid", paddingTop: "30px", paddingLeft: "10%", paddingRight: "10%", paddingBottom: "30px" }}>
                 <h4 style={{ marginBottom: "30px" }}>Add Your Prpperty</h4>
