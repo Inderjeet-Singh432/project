@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React from 'react';
 import styled from 'styled-components';
+import ReactModal from "react-modal";
 
 export default function Body() {
   return (
