@@ -115,96 +115,102 @@ export default function Header() {
                 </div>
                 {/* .hero-content-wrap */}
               </div>
-              <div className="col-md justify-content-center" style={{ backgroundColor: "white", margin: "2px" }}>
-                <div className="row">
 
-                  <div className="col-4">
-                    <div className="row"
-                      style={{ height: "50px" }}>
-                      <div className="col-1">
-                        <i className="bi-search" style={{position:"absolute", top:"50%", left:"10px", transform:"translateY(-50%)"}}></i>
-                      </div>
-                      <div className="col">
-                        <input
-                          type="text"
-                          id="location"
-                          style={{ height: "100%", width: "100%", border: "solid" }}
-                          placeholder="Enter city, hotel, or destination"
-                          value={location}
-                          onChange={(e) => setLocation(e.target.value)}
-                        />
-                      </div>
-                    </div>
-                  </div>
+              <div className='col-12' style={{ backgroundColor: "", paddingLeft: "45%", marginTop: "-20%" }}>
+                <div className="card" style={{ borderRadius:"20px",width: "40rem", padding:"30px", marginBottom:"40px" }}>
+                  <div>
+                    <div className="row">
 
-                  <div className="col-4">
-                    <div className="row"
-                      style={{ height: "50px" }}>
-                      <div className="col-1">
-                        <i className="bi bi-calendar4-event"  style={{position:"absolute", top:"50%", left:"10px", transform:"translateY(-50%)"}}></i>
-                      </div>
-                      <div className="col">
-                        <div className="row form-group dates">
-                          <div className="col date-picker">
-                            <DatePicker
-                              style={{height: "100%", width: "100%", border: "solid" }}
-                              selected={checkInDate}
-                              onChange={(date) => setCheckInDate(date)}
-                              dateFormat="MMM dd, yyyy"
-                              placeholderText="Select check-in date"
-                              minDate={new Date()}
-                            />
+                      <div className="col-12">
+                        <div className="row"
+                          style={{ height: "50px",marginBottom:"15px"}}>
+                          <div className="col-1">
+                            <i className="bi-search" style={{ position: "absolute", top: "50%", left: "10px", transform: "translateY(-50%)" }}></i>
                           </div>
-                          <div className="col date-picker">
-                            <DatePicker
-                              style={{ height: "100%", width: "100%", border: "solid" }}
-                              selected={checkOutDate}
-                              onChange={(date) => setCheckOutDate(date)}
-                              dateFormat="MMM dd, yyyy"
-                              placeholderText="Select check-out date"
-                              minDate={checkInDate || new Date()}
+                          <div className="col">
+                            <input
+                              type="text"
+                              id="location"
+                              style={{ height: "100%", width: "100%", border: "solid", borderRadius:"20px" }}
+                              placeholder="Enter city, hotel, or destination"
+                              value={location}
+                              onChange={(e) => setLocation(e.target.value)}
                             />
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
 
-                  <div className="col-3">
-                    <div className="row"
-                      style={{ height: "50px" }}>
-                      <div className="col-1">
-                        <i className="bi bi-person-plus"  style={{position:"absolute", top:"50%", left:"10px", transform:"translateY(-50%)"}} ></i>
-                      </div>
-                      <div className="col">
-                        <div calassName="container">
-                          <input
-                            className="input-group-text"
-                            data-bs-toggle="collapse"
-                            href="#multiCollapseExample1"
-                            role="button"
-                            aria-expanded="false"
-                            aria-controls="multiCollapseExample1"
-                            onClick={() => setIsVisible(!isVisible)}
-                            placeholder='1 Travller'
-                            style={{ height: "50px", width: "100%", border: "solid" }}
-
-                          />
-                          <div className={`overlay ${isVisible ? 'visible' : ''}`}>
-                            <p>This div overlaps others when toggled!</p>
+                      <div className="col-12">
+                        <div className="row"
+                          style={{ height: "50px" ,marginBottom:"2px"}}>
+                          <div className="col-1">
+                            <i className="bi bi-calendar4-event" style={{ position: "absolute", top: "50%", left: "10px", transform: "translateY(-50%)" }}></i>
+                          </div>
+                          <div className="col">
+                            <div className="row form-group dates">
+                              <div className="col date-picker">
+                                <DatePicker
+                                  style={{ height: "100%", width: "100%", border: "solid"}}
+                                  selected={checkInDate}
+                                  onChange={(date) => setCheckInDate(date)}
+                                  dateFormat="MMM dd, yyyy"
+                                  placeholderText="Select check-in date"
+                                  minDate={new Date()}
+                                />
+                              </div>
+                              <div className="col date-picker">
+                                <DatePicker
+                                  style={{ height: "100%", width: "100%", border: "solid"}}
+                                  selected={checkOutDate}
+                                  onChange={(date) => setCheckOutDate(date)}
+                                  dateFormat="MMM dd, yyyy"
+                                  placeholderText="Select check-out date"
+                                  minDate={checkInDate || new Date()}
+                                />
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
+
+                      <div className="col-12">
+                        <div className="row"
+                          style={{ height: "50px",marginBottom:"10px" }}>
+                          <div className="col-1">
+                            <i className="bi bi-person-plus" style={{ position: "absolute", top: "50%", left: "10px", transform: "translateY(-50%)" }} ></i>
+                          </div>
+                          <div className="col">
+                            <div calassName="container">
+                              <input
+                                className="input-group-text"
+                                data-bs-toggle="collapse"
+                                href="#multiCollapseExample1"
+                                role="button"
+                                aria-expanded="false"
+                                aria-controls="multiCollapseExample1"
+                                onClick={() => setIsVisible(!isVisible)}
+                                placeholder='1 Travller'
+                                style={{ height: "50px", width: "100%", border: "solid", borderRadius:"20px" }}
+
+                              />
+                              <div className={`overlay ${isVisible ? 'visible' : ''}`}>
+                                <p>This div overlaps others when toggled!</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button className="col btn btn-primary" style={{ height: "100%", borderRadius:"20px",marginTop:"15px" }}
+                        onClick={handleSearch} disabled={!location || !checkInDate || !checkOutDate}>
+                        Search
+                      </button>
                     </div>
                   </div>
-                  
-                  <button className="btn btn-primary" style={{ height: "100%" }}
-                    onClick={handleSearch} disabled={!location || !checkInDate || !checkOutDate}>
-                    Search
-                  </button>
-
                 </div>
               </div>
+
+              <div className="col-md " style={{ backgroundColor: "white" }}>    </div>
             </div>
           </div>
         </div>
