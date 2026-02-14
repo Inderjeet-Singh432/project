@@ -2750,3 +2750,33 @@ p.footer-copyright {
 .img-hover-zoom:hover img {
   transform: scale(1);
 }
+
+
+
+
+
+.container {
+  position: relative; /* Allows absolute positioning inside */
+  padding: 20px;
+}
+
+.overlay {
+  position: absolute; /* Takes it out of flow to overlap */
+  top: 50px; /* Position from top of container */
+  left: 0;
+  width: 300px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.8);
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000; /* High value to stack on top */
+  opacity: 0; /* Hidden by default */
+  visibility: hidden; /* Prevents interaction when hidden */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth toggle */
+}
+
+.overlay.visible {
+  opacity: 1; /* Show when class is added */
+  visibility: visible;
+}
