@@ -53,13 +53,13 @@ export default function AllProperty() {
 
                                                         <div className="row">
                                                             <div className="col">
-                                                                <Link className="btn btn-outline-primary d-flex justify-content-center rounded-circle overflow-hidden" to={"/booking/" + el?._id}
-                                                                    style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px" }}
+                                                                <Link className="btn btn-outline-primary d-flex justify-content-center overflow-hidden" to={"/booking/" + el?._id}
+                                                                    style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px",borderRadius:"20px",color:"white", backgroundColor:"black" }}
                                                                 >View</Link>
                                                             </div>
                                                             <div className="col">
                                                                 <Link className="btn btn-outline-primary d-flex justify-content-center" to={"/booking/" + el?._id}
-                                                                    style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px" }}
+                                                                    style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px", borderRadius:"20px",color:"white", backgroundColor:"black" }}
                                                                 >Book Now</Link>
                                                             </div>
 

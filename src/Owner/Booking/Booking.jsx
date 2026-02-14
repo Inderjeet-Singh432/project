@@ -129,11 +129,11 @@ export default function Booking() {
                                                 </div>
                                                 <div className="col">
                                                     <Link className="btn btn-outline-primary d-flex justify-content-center"
-                                                        style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px" }}
+                                                        style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px",borderRadius:"20px",color:"white", backgroundColor:"black" }}
                                                         onClick={buy}
                                                     >Book now</Link>
                                                     <Link className="btn btn-outline-primary d-flex justify-content-center"
-                                                        style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px" }}
+                                                        style={{ border: "1px solid black", height: "40px", width: "150px", marginTop: "40px",borderRadius:"20px",color:"white", backgroundColor:"black" }}
                                                         to={"/allproperty"}
                                                     >Back</Link>
                                                 </div>
