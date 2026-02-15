@@ -5,7 +5,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import DatePicker from "react-datepicker";
 import 'react-datepicker/dist/react-datepicker.css';
 
-
 export default function Header() {
   const [location, setLocation] = useState('');
   const [checkInDate, setCheckInDate] = useState(null);
@@ -118,13 +117,14 @@ export default function Header() {
               </div>
 
               <div className='col-12' style={{ backgroundColor: "", paddingLeft: "45%", marginTop: "-20%" }}>
-                <div className="card" style={{ borderRadius:"20px",width: "40rem", padding:"30px", marginBottom:"40px" }}>
+
+                <div className="card" style={{ borderRadius: "20px", width: "100%", padding: "30px", marginBottom: "40px", marginRight: "" }}>
                   <div>
                     <div className="row">
 
                       <div className="col-12">
                         <div className="row"
-                          style={{ height: "50px",marginBottom:"15px"}}>
+                          style={{ height: "50px", marginBottom: "15px" }}>
                           <div className="col-1">
                             <i className="bi-search" style={{ position: "absolute", top: "50%", left: "10px", transform: "translateY(-50%)" }}></i>
                           </div>
@@ -132,7 +132,7 @@ export default function Header() {
                             <input
                               type="text"
                               id="location"
-                              style={{ height: "100%", width: "100%", border: "solid", borderRadius:"20px" }}
+                              style={{ height: "100%", width: "100%", border: "solid", borderRadius: "20px" }}
                               placeholder="Enter city, hotel, or destination"
                               value={location}
                               onChange={(e) => setLocation(e.target.value)}
@@ -143,7 +143,7 @@ export default function Header() {
 
                       <div className="col-12">
                         <div className="row"
-                          style={{ height: "50px" ,marginBottom:"2px"}}>
+                          style={{ height: "50px", marginBottom: "2px" }}>
                           <div className="col-1">
                             <i className="bi bi-calendar4-event" style={{ position: "absolute", top: "50%", left: "10px", transform: "translateY(-50%)" }}></i>
                           </div>
@@ -151,7 +151,7 @@ export default function Header() {
                             <div className="row form-group dates">
                               <div className="col date-picker">
                                 <DatePicker
-                                  style={{ height: "100%", width: "100%", border: "solid"}}
+                                  style={{ height: "100%", width: "100%", border: "solid" }}
                                   selected={checkInDate}
                                   onChange={(date) => setCheckInDate(date)}
                                   dateFormat="MMM dd, yyyy"
@@ -161,7 +161,7 @@ export default function Header() {
                               </div>
                               <div className="col date-picker">
                                 <DatePicker
-                                  style={{ height: "100%", width: "100%", border: "solid"}}
+                                  style={{ height: "100%", width: "100%", border: "solid" }}
                                   selected={checkOutDate}
                                   onChange={(date) => setCheckOutDate(date)}
                                   dateFormat="MMM dd, yyyy"
@@ -176,7 +176,7 @@ export default function Header() {
 
                       <div className="col-12">
                         <div className="row"
-                          style={{ height: "50px",marginBottom:"10px" }}>
+                          style={{ height: "50px", marginBottom: "10px" }}>
                           <div className="col-1">
                             <i className="bi bi-person-plus" style={{ position: "absolute", top: "50%", left: "10px", transform: "translateY(-50%)" }} ></i>
                           </div>
@@ -191,7 +191,7 @@ export default function Header() {
                                 aria-controls="multiCollapseExample1"
                                 onClick={() => setIsVisible(!isVisible)}
                                 placeholder='1 Travller'
-                                style={{ height: "50px", width: "100%", border: "solid", borderRadius:"20px" }}
+                                style={{ height: "50px", width: "100%", border: "solid", borderRadius: "20px" }}
 
                               />
                               <div className={`overlay ${isVisible ? 'visible' : ''}`}>
@@ -202,7 +202,7 @@ export default function Header() {
                         </div>
                       </div>
 
-                      <button className="col btn btn-primary" style={{ height: "100%", borderRadius:"20px",marginTop:"15px" }}
+                      <button className="col btn btn-primary" style={{ height: "100%", borderRadius: "20px", marginTop: "15px" }}
                         onClick={handleSearch} disabled={!location || !checkInDate || !checkOutDate}>
                         Search
                       </button>
