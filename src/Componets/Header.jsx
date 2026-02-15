@@ -22,7 +22,8 @@ export default function Header() {
 
   const handleSearch = () => {
     // Placeholder for search logic (e.g., API call to fetch hotels)
-    alert(`Searching for hotels in ${location} from ${checkInDate?.toDateString()} to ${checkOutDate?.toDateString()} for ${adults} adults, ${children} children, and ${rooms} rooms.`);
+    // alert(`Searching for hotels in ${location} from ${checkInDate?.toDateString()} to ${checkOutDate?.toDateString()} for ${adults} adults, ${children} children, and ${rooms} rooms.`);
+    alert("going to external link");
   };
 
   return (
