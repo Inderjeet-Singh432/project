@@ -7,7 +7,7 @@ export default function Body() {
   return (
     <>
 
-      <div className="icon-boxes" style={{ backgroundColor: "#f7f7f7" }}>
+      <div className="icon-boxes" style={{ backgroundColor: "#d4e5fff3",marginTop:"40px" }}>
         <div className="container-fluid">
           <div className=" row flex flex-wrap align-items-stretch">
 
@@ -150,7 +150,7 @@ export default function Body() {
         </div>
       </section>
       {/* .courses-wrap */}
-      <section className="about-section">
+      <section className="about-section" style={{marginBottom:"40px"}}>
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg align-content-lg-stretch">
@@ -270,7 +270,7 @@ export default function Body() {
                             </div>
                           </section> */}
       {/* reviews start */}
-      <section className="featured-courses vertical-column courses-wrap" style={{ marginTop: "" }}>
+      <section className="featured-courses vertical-column courses-wrap" style={{ marginTop: "40px",marginBottom:"40px" }}>
         <div className="container">
           <div className="row mx-m-25">
             <div className="col-12 px-25">
@@ -587,9 +587,9 @@ const AB = styled.div`
     width: 100%;
     height: 120px;
     --s: 222px;
-    --c1: #aec09e;
-    --c2: #d3d6d4;
-    --c3: #929b99;
+    --c1: #9ec0dc;
+    --c2: #cad5dc;
+    --c3: #1781af;
 
     --_g: var(--c1) 10%, var(--c2) 10.5% 19%, #0000 19.5% 80.5%,
       var(--c2) 81% 89.5%, var(--c3) 90%;
@@ -644,7 +644,7 @@ const CC = styled.div`
     width: 90%;
     height: 90%;
     transform: translate(-50%);
-    background: #ced8ff;
+    background: #9ba5d3;
     z-index: -1;
     transform-origin: bottom;
 
@@ -660,7 +660,7 @@ const CC = styled.div`
     width: 80%;
     height: 80%;
     transform: translate(-50%);
-    background: #e7ecff;
+    background: #1d2e6b;
     z-index: -2;
     transform-origin: bottom;
     border-radius: inherit;

@@ -708,7 +708,7 @@ a.btn:hover {
 # Featured Courses: Vertical Column
 --------------------------------*/
 .featured-courses.vertical-column {
-    background: #f7f7f7;
+    background: #d4e5fff3;
 }
 
 .featured-courses.vertical-column a.btn {
@@ -720,7 +720,7 @@ a.btn:hover {
 --------------------------------*/
 .about-section {
     padding: 100px 0;
-    background: #f7f7f7;
+    background: #d4e5fff3;
 }
 
 .about-section .heading {
@@ -1145,7 +1145,7 @@ a.btn:hover {
 .clients-logo {
     margin-top: 100px;
     padding: 16px 0;
-    background: #f7f7f7;
+    background: #d4e5fff3;
 }
 
 .logo-wrap {
@@ -1290,7 +1290,7 @@ a.btn:hover {
     padding: 10px 20px;
     border: 1px solid #ebebeb;
     font-size: 14px;
-    background: #f7f7f7;
+    background: #d4e5fff3;
     color: #383749;
     outline: none;
 }
@@ -2537,7 +2537,7 @@ ul.author-social-profile li:hover .fa {
     padding: 12px 20px;
     margin-top: 18px;
     border: 1px solid #ebebeb;
-    background: #f7f7f7;
+    background: #d4e5fff3;
     color: #383749;
 }
 
@@ -2612,7 +2612,7 @@ ul.author-social-profile li:hover .fa {
 # Footer
 --------------------------------------------------------------*/
 .footer-widgets {
-    padding: 60px 0;
+    padding: 20px 0;
     color: #757686;
 }
 

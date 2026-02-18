@@ -5399,7 +5399,7 @@ button.close {
   width: 20px;
   margin-left: -10px;
   content: "";
-  border-bottom: 1px solid #f7f7f7;
+  border-bottom: 1px solid #d4e5fff3;
 }
 
 .popover.bs-popover-left, .popover.bs-popover-auto[x-placement^="left"] {
@@ -5431,7 +5431,7 @@ button.close {
   margin-bottom: 0;
   font-size: 1rem;
   color: inherit;
-  background-color: #f7f7f7;
+  background-color: #d4e5fff3;
   border-bottom: 1px solid #ebebeb;
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
