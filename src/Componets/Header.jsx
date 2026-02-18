@@ -14,7 +14,6 @@ export default function Header() {
   const [rooms, setRooms] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
 
-
   useEffect(() => {
     sessionStorage.clear()
   }, [])
