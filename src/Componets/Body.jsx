@@ -3,11 +3,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 export default function Body() {
-
+sessionStorage.clear()
   return (
     <>
-
-      <div className="icon-boxes" style={{ backgroundColor: "#d4e5fff3",marginTop:"40px" }}>
+      
+      <div className="icon-boxes" style={{marginTop:"40px" }}>
         <div className="container-fluid">
           <div className=" row flex flex-wrap align-items-stretch">
 
@@ -150,7 +150,7 @@ export default function Body() {
         </div>
       </section>
       {/* .courses-wrap */}
-      <section className="about-section" style={{marginBottom:"40px"}}>
+      <section className="about-section" style={{marginBottom:"40px",padding:"0px"}}>
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg align-content-lg-stretch">
@@ -270,7 +270,7 @@ export default function Body() {
                             </div>
                           </section> */}
       {/* reviews start */}
-      <section className="featured-courses vertical-column courses-wrap" style={{ marginTop: "40px",marginBottom:"40px" }}>
+      <section className="featured-courses vertical-column courses-wrap" style={{ padding:"0px",marginTop: "40px",marginBottom:"40px" }}>
         <div className="container">
           <div className="row mx-m-25">
             <div className="col-12 px-25">
@@ -632,7 +632,7 @@ const CC = styled.div`
     border-radius: 22px;
     color: #ffffff;
     overflow: hidden;
-    background: #0a3cff;
+    background: #95a6e9;
     transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
@@ -660,7 +660,7 @@ const CC = styled.div`
     width: 80%;
     height: 80%;
     transform: translate(-50%);
-    background: #1d2e6b;
+    background: #495b9a;
     z-index: -2;
     transform-origin: bottom;
     border-radius: inherit;

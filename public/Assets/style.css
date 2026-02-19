@@ -197,7 +197,7 @@ a:hover, a:active {
 }
 /* -----------------------------------------------------------------------------------header  */
 .site-title a span {
-    color: #0a3cff;
+    color: #abc9e8;
 }
 
 @media screen and (min-width: 576px){
@@ -309,7 +309,7 @@ a:hover, a:active {
 /* -----------------------------------------------------------------------------------header  */
 .site-navigation ul li a:hover,
 .site-navigation ul li.current-menu-item a {
-    color: #0a3cff;
+    color: #abc9e8;
 }
 
 /*
@@ -333,7 +333,7 @@ a:hover, a:active {
 # Hero Section
 --------------------------------------------------------------*/
 .hero-content {
-    background: url("images/p3.png") no-repeat center;
+    background: url("images/16.avif") no-repeat center;
     background-size: cover;
 }
 
@@ -2612,7 +2612,7 @@ ul.author-social-profile li:hover .fa {
 # Footer
 --------------------------------------------------------------*/
 .footer-widgets {
-    padding: 20px 0;
+    padding: 30px 0;
     color: #757686;
 }
 

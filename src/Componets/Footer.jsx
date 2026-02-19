@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <>
       <footer className="site-footer"
-       style={{backgroundColor: "#9ba5d3", marginTop:"40px",paddingLeft: "4%", paddingRight: "4%", height: "100%" }}
+       style={{backgroundColor: "#dae6ff", marginTop:"40px",paddingLeft: "4%", paddingRight: "4%", height: "100%" }}
       >
         <div className="footer-widgets" >
           <div className="container-fluid">

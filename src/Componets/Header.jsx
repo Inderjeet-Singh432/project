@@ -19,9 +19,19 @@ export default function Header() {
   }, [])
 
   const handleSearch = () => {
-    // Placeholder for search logic (e.g., API call to fetch hotels)
-    // alert(`Searching for hotels in ${location} from ${checkInDate?.toDateString()} to ${checkOutDate?.toDateString()} for ${adults} adults, ${children} children, and ${rooms} rooms.`);
-    alert("going to external link");
+    sessionStorage.setItem("loaction",location)
+    sessionStorage.setItem("checkInDate",checkInDate)
+    sessionStorage.setItem("checkOutDate",checkOutDate)
+    sessionStorage.setItem("adults",adults)
+    sessionStorage.setItem("children",children)
+    sessionStorage.setItem("rooms",rooms)
+
+    setLocation("")
+    setCheckInDate("")
+    setCheckOutDate("")
+    setAdults("")
+    setChildren("")
+    setRooms("")
   };
 
   return (
@@ -95,17 +105,16 @@ export default function Header() {
         <div className="hero-content-overlay">
           <div className="container-fluid">
             <div className="row-md">
+
               <div className="col-4" >
                 <div className="hero-content-wrap flex flex-column justify-content-center align-items-start" style={{ height: "500px" }}>
                   <header className="entry-header" >
-                    {/* <h4>Get started with online courses</h4> */}
                     <h1>
                       multiple stay
                       <br />
                       booking site
                     </h1>
                   </header>
-                  {/* .entry-header */}
                   <div className="entry-content">
                     <p>
                       you can book multiple type of sites for stay like/; hotel , PG (paying guest) , Dormitory
@@ -115,7 +124,7 @@ export default function Header() {
                 {/* .hero-content-wrap */}
               </div>
 
-              <div className='col-12' style={{ backgroundColor: "", paddingLeft: "45%", marginTop: "-20%" }}>
+              <div className='col-12' style={{ paddingLeft: "45%", marginTop: "-20%", paddingBottom: "20px" }}>
 
                 <div className="card" style={{ borderRadius: "20px", width: "100%", padding: "30px", marginBottom: "40px", marginRight: "" }}>
                   <div>
@@ -201,16 +210,17 @@ export default function Header() {
                         </div>
                       </div>
 
-                      <button className="col btn btn-primary" style={{ height: "100%", borderRadius: "20px", marginTop: "15px" }}
-                        onClick={handleSearch} disabled={!location || !checkInDate || !checkOutDate}>
+                      <Link className="col btn btn-primary" style={{ height: "100%", borderRadius: "20px", marginTop: "15px" }}
+                        onClick={handleSearch} disabled={!location || !checkInDate || !checkOutDate}
+                        to={"/viewproperty"}
+                        >
                         Search
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="col-md " style={{ backgroundColor: "white" }}>    </div>
             </div>
           </div>
         </div>

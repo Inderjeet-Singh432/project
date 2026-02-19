@@ -19,6 +19,7 @@ import ManageUsers from './Admin/AdminBodyMaster/ManageUsers'
 import DeleteOwner from './Admin/Componets/DeleteOwner'
 import AdminAllProperty from './Admin/Componets/AdminAllProperty'
 import ManageBooking from './Admin/Componets/ManageBooking'
+import ViewProperty from './Owner/Booking/ViewProperty'
 
 function App() {
      return (
@@ -30,6 +31,7 @@ function App() {
                               <Route path='/login' element={<Login />}></Route>
                               <Route path='/register' element={<Register />}></Route>
                               <Route path='/allproperty' element={<AllProperty />}></Route>
+                              <Route path='/viewproperty' element={<ViewProperty />}></Route>
                               <Route path='/booking/:id' element={<Booking />}></Route>
                          </Route>
 
