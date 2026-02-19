@@ -13,18 +13,34 @@ export default function Header() {
   const [children, setChildren] = useState(0);
   const [rooms, setRooms] = useState(1);
   const [isVisible, setIsVisible] = useState(false);
+  var [count, setCount] = useState(1)
+  var [count1, setCount1] = useState(2)
+  var [count2, setCount2] = useState(0)
+
+  function Incfun() {
+    console.log("inc fun call");
+    setCount(count + 1)
+  }
+  function Incfun1() {
+    console.log("inc fun call");
+    setCount1(count1 + 1)
+  }
+  function Incfun2() {
+    console.log("inc fun call");
+    setCount2(count2 + 1)
+  }
 
   useEffect(() => {
     sessionStorage.clear()
   }, [])
 
   const handleSearch = () => {
-    sessionStorage.setItem("loaction",location)
-    sessionStorage.setItem("checkInDate",checkInDate)
-    sessionStorage.setItem("checkOutDate",checkOutDate)
-    sessionStorage.setItem("adults",adults)
-    sessionStorage.setItem("children",children)
-    sessionStorage.setItem("rooms",rooms)
+    sessionStorage.setItem("loaction", location)
+    sessionStorage.setItem("checkInDate", checkInDate)
+    sessionStorage.setItem("checkOutDate", checkOutDate)
+    sessionStorage.setItem("adults", adults)
+    sessionStorage.setItem("children", children)
+    sessionStorage.setItem("rooms", rooms)
 
     setLocation("")
     setCheckInDate("")
@@ -32,6 +48,7 @@ export default function Header() {
     setAdults("")
     setChildren("")
     setRooms("")
+    setIsVisible(false)
   };
 
   return (
@@ -144,6 +161,7 @@ export default function Header() {
                               placeholder="Enter city, hotel, or destination"
                               value={location}
                               onChange={(e) => setLocation(e.target.value)}
+                              
                             />
                           </div>
                         </div>
@@ -200,10 +218,27 @@ export default function Header() {
                                 onClick={() => setIsVisible(!isVisible)}
                                 placeholder='1 Travller'
                                 style={{ height: "50px", width: "100%", border: "solid", borderRadius: "20px" }}
-
                               />
-                              <div className={`overlay ${isVisible ? 'visible' : ''}`}>
-                                <p>This div overlaps others when toggled!</p>
+                             
+                              <div className={`overlay ${isVisible ? 'visible' : '100%'}`}>
+                                <div className="row">
+                                  <h5 className='col-6'>Room </h5>
+                                  <button className='col btn' onClick={Incfun}>+</button>
+                                  <span className='col' value={rooms} >{count}</span>
+                                  <button className='col btn ' onClick={() => { setCount(count - 1) }}>-</button>
+                                </div>
+                                <div className="row">
+                                  <h5 className='col-6'>Adults </h5>
+                                  <button className='col btn' onClick={Incfun1}>+</button>
+                                  <span className='col' value={adults}>{count1}</span>
+                                  <button className='col btn '  onClick={() => { setCount1(count1 - 1) }}>-</button>
+                                </div>
+                                <div className="row">
+                                  <h5 className='col-6'>Childrean </h5>
+                                  <button className='col btn' onClick={Incfun2}>+</button>
+                                  <span className='col' value={children}>{count2}</span>
+                                  <button className='col btn ' onClick={() => { setCount2(count2 - 1) }}>-</button>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -213,7 +248,7 @@ export default function Header() {
                       <Link className="col btn btn-primary" style={{ height: "100%", borderRadius: "20px", marginTop: "15px" }}
                         onClick={handleSearch} disabled={!location || !checkInDate || !checkOutDate}
                         to={"/viewproperty"}
-                        >
+                      >
                         Search
                       </Link>
                     </div>

@@ -76,13 +76,13 @@ export default function Login() {
             <div className="col-5"></div>
 
             <div className="col blur-overlay" style={{ marginTop: "-400px", border: "1.2px solid", paddingTop: "30px", paddingLeft: "5%", paddingRight: "5%", paddingBottom: "30px" }}>
-              <BarLoader cssOverride={{ marginTop:"25%" , marginLeft:"40%"}} loading={load} />
+              <BarLoader cssOverride={{ marginTop:"25%" , marginLeft:"40%",backgroundColor:"white"}} loading={load} />
               {!load ?
                 <div>
-                  <h4 style={{ marginBottom: "30px", color: "white" }}>Login</h4>
+                  <h4 style={{ marginBottom: "30px" }}>Login</h4>
                   <form className="" onSubmit={handewlform}  >
                     <div className="container-fluid">
-                      <label className="form-label" style={{ color: "white" }}>Email address</label>
+                      <label className="form-label" >Email address</label>
                       <input type="email" className="form-control" placeholder="enter your email"
                         value={email}
                         onChange={(e) => (setEmail(e.target.value))}
@@ -90,7 +90,7 @@ export default function Login() {
                       />
                     </div>
                     <div className="container-fluid">
-                      <label className="form-label" style={{ color: "white" }}>Password</label>
+                      <label className="form-label">Password</label>
                       <input type="password" className="form-control" placeholder="enter password"
                         value={password}
                         onChange={(e) => { setPassword(e.target.value) }}
@@ -99,7 +99,7 @@ export default function Login() {
                     </div>
                     <div className="d-flex justify-content-between">
                       <button className="btn btn-primary" type='submit' style={{ height: "40px", width: "100px", marginTop: "40px" }} >Submit</button>
-                      <button onClick={cancel} className="btn btn-outline-primary d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</button>
+                      <button onClick={cancel} className="btn btn-outline-black d-flex justify-content-center" style={{ height: "40px", width: "100px", marginTop: "40px" }} >cancel</button>
                     </div>
 
                   </form>
